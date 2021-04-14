@@ -10,7 +10,7 @@ Point(const Point&);
 Point& operator=(const Point&);
 
 //destructor
-~Point();
+virtual ~Point();
 
 //overloading = operator
 bool operator==(const Point&) const;
