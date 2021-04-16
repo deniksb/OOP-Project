@@ -15,10 +15,14 @@ virtual ~Point();
 //overloading = operator
 bool operator==(const Point&) const;
 
+double getX() const;
+double getY() const;
+double getZ() const;
 
 
 
-private:
+
+protected:
 double x,y,z;
 
 };

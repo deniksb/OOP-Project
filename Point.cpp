@@ -29,6 +29,17 @@ bool Point::operator==(const Point& rhs) const{
         return false;
 }
 
+double Point::getX() const{
+    return x;
+
+}
+double Point::getY() const{
+    return y;
+}
+double Point::getZ() const{
+    return z;
+}
+
 
 
 
