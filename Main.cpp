@@ -16,7 +16,9 @@ int main(){
 
     Point p4(p2);
 
-    Triangle(p1,p2,p4);
+    Triangle(p1,p2,p3);
+
+    cout << p3;
 
 
 
