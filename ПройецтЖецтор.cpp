@@ -31,36 +31,32 @@ int main() {
     cout << "Vectors:";
     cout << endl;
     Vector v1(p1, p2);
-    cout << "Vector v1(A,B)";
-    cout << endl;
-
-    cout << v1;
+    cout << " vector v1" << v1;
     cout << endl;
 
     Vector v2(3, 4, 1, 5, 0, 2);
-    cout << "Vector v2(A,B)";
+    cout << " vector v2" << v2;
     cout << endl;
 
-    cout << v2;
-    cout << endl;
-
-    cout <<  "v1 |AB| = " << v1.lenghtOfV() << endl;
-    cout << "v2 |AB| = " << v2.lenghtOfV();
+    cout <<  " |v1|= " << v1.lenghtOfV() << endl;
+    cout << " |v2| = " << v2.lenghtOfV();
     cout << endl;
     cout << endl;
 
-    cout << "Direction of vector v2";
+    cout << "Direction of vector v2" << v2 << endl;
+    cout << " __" << endl;
+    cout<< " v2" << v2.directionOfV();
+    cout << endl;
     cout << endl;
 
-    cout << "AB direction " << v2.directionOfV();
+    cout << "Is vector v1" << v1 << " null vector? ";
+    cout << endl;
+    cout << " Answer: ";
+    v1.isNullVector() ? cout << " Yes, it is a null vector." : cout << " No, it is not a null vector.";
     cout << endl;
     cout << endl;
-
-    cout << "Is vector v1(A,B) null vector? ";
-    cout << endl;
-    cout << "Answer: ";
-    v1.isNullVector() ? cout << "Yes, it is a null vector." : cout << "No, it is not a null vector.";
-    cout << endl;
-    cout << endl;
+    v1.arePararell(v2) ? cout << "vector v1" << v1 << " and v2"<< v2 << " are pararell": cout << "vector v1" << v1 << " and v2" << v2 << " are NOT pararell";
+    cout << endl << endl;
+    v1.arePerpendicular(v2) ? cout << "vector v1" << v1 << " and v2" << v2 << " are perpendicular" : cout << "vector v1" << v1 << " and v2" << v2 << " are NOT perpendicular";
     return 0;
 }

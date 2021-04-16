@@ -33,14 +33,14 @@ Vector& Vector::operator=(const Vector& rhs) {
 }
 //virtual Vector ins
 std::ostream& Vector::ins(std::ostream& out)const {
-	out << " A(" << A.getX() << "," << A.getY() << "," << A.getZ() << ")\n" << " B(" << B.getX() << "," << B.getY() << "," << B.getZ() << ")\n" << " vector AB(" << vector.getX() << "," << vector.getY() << "," << vector.getZ() << ")\n";
+	out << "(" << vector.getX() << "," << vector.getY() << "," << vector.getZ() << ")";
 	return out;
 }
 //overloading operator <_cout_> << <_Vector_>
 std::ostream& operator<<(std::ostream& lhs, const Vector& rhs) {
 	return rhs.ins(lhs);
 }
-//overloading operator <_Vector_>(double,double,double) 
+//overloading operator <c_Vector_>(double,double,double) 
 Vector& Vector::operator()(double A_x, double A_y, double A_z, double B_x, double B_y, double B_z) {
 	Point tmpA(A_x,A_y,A_z);
 	Point tmpB(B_x,B_y,B_z);
@@ -50,7 +50,7 @@ Vector& Vector::operator()(double A_x, double A_y, double A_z, double B_x, doubl
 	return *this;
 }
 
-//function for lenght of a vector
+//function for lenght of a vector <==> единичен вектор
 double Vector::lenghtOfV()const {
 	return sqrt(pow(vector.getX(),2)+pow(vector.getY(),2)+pow(vector.getZ(),2));
 }
@@ -67,4 +67,15 @@ bool Vector::isNullVector()const {
 		return true;
 	}
 	return false;
+}
+
+//parallelism of two vectors
+bool Vector::arePararell(const Vector& v1)const {
+	//x : v1 = y : v2 = z : v3
+	return (vector.getX() / v1.getVectorX()) == 0 && (vector.getY() / v1.getVectorY()) == 0 && (vector.getZ() / v1.getVectorZ()) == 0;
+}
+
+//perpendicularity of two vectors
+bool Vector::arePerpendicular(const Vector& v1)const {
+	return (vector.getX() * v1.getVectorX()) + (vector.getY() * v1.getVectorY()) + (vector.getZ() * v1.getVectorZ()) == 0;
 }
