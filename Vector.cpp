@@ -31,6 +31,12 @@ Vector& Vector::operator=(const Vector& rhs) {
 	}
 	return *this;
 }
+
+//printV() <==> prints the vector
+int Vector::printV() {
+	std::cout << "(" << getVectorX() << ", " << getVectorY() << "," << getVectorZ() << ")";
+	return 0;
+}
 //virtual Vector ins
 std::ostream& Vector::ins(std::ostream& out)const {
 	out << "(" << vector.getX() << "," << vector.getY() << "," << vector.getZ() << ")";
@@ -57,6 +63,10 @@ double Vector::lenghtOfV()const {
 
 //direction of a vector
 Point Vector::directionOfV()const {
+	if (lenghtOfV()==0)
+	{
+		throw VectorLengthException("Direction of this Vector has the Lenght of 0! There for this action can't be performed.");
+	}
 	return Point(vector.getX() / (lenghtOfV()), vector.getY() / (lenghtOfV()), vector.getZ() / (lenghtOfV()));
 }
 
@@ -72,10 +82,19 @@ bool Vector::isNullVector()const {
 //parallelism of two vectors
 bool Vector::arePararell(const Vector& v1)const {
 	//x : v1 = y : v2 = z : v3
+	if (lenghtOfV()==0 || v1.lenghtOfV()==0)
+	{
+		throw VectorLengthException("Vector lenght is 0! There for this action can't be performed. ");
+	}
 	return (vector.getX() / v1.getVectorX()) == 0 && (vector.getY() / v1.getVectorY()) == 0 && (vector.getZ() / v1.getVectorZ()) == 0;
 }
 
 //perpendicularity of two vectors
 bool Vector::arePerpendicular(const Vector& v1)const {
+	//x.v1 + y.v2 + z*v3 = 0
+	if (lenghtOfV() == 0 || v1.lenghtOfV() == 0)
+	{
+		throw VectorLengthException("Vector lenght is 0! There for this action can't be performed. ");
+	}
 	return (vector.getX() * v1.getVectorX()) + (vector.getY() * v1.getVectorY()) + (vector.getZ() * v1.getVectorZ()) == 0;
 }

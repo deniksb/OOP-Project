@@ -47,9 +47,7 @@ std::ostream& operator<<(std::ostream& lhs, const Point & rhs) {
 std::istream& operator>>(std::istream& lhs, Point& rhs) {
     return rhs.ext(lhs);
 }
-//overloading operator +
+//overloading operator + <==> A+B = rhs.x-x,rhs.y-y,rhs.z-z;
 Point Point::operator+(const Point& rhs)const {
-    Point tmpP(rhs.x-x,rhs.y-y,rhs.z-z);
-    return tmpP;
-    //return Point(rhs.x-x,rhs.y-y,rhs.z-z);
+    return Point(rhs.x-x,rhs.y-y,rhs.z-z);
 }

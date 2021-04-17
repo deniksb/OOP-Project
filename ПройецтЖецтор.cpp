@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include "Point.h"
 #include "Vector.h"
+#include "Triangle.hpp"
 using namespace std;
 
 
@@ -43,9 +44,16 @@ int main() {
     cout << endl;
     cout << endl;
 
-    cout << "Direction of vector v2" << v2 << endl;
-    cout << " __" << endl;
-    cout<< " v2" << v2.directionOfV();
+    cout << "Direction of vector v1" << v1 << endl;
+    try
+    {
+        cout << " __\n" << " v2" << v1.directionOfV();
+    }
+    catch (VectorLengthException directionProblem)
+    {
+        cout << directionProblem.what();
+    }
+    
     cout << endl;
     cout << endl;
 
@@ -55,8 +63,25 @@ int main() {
     v1.isNullVector() ? cout << " Yes, it is a null vector." : cout << " No, it is not a null vector.";
     cout << endl;
     cout << endl;
-    v1.arePararell(v2) ? cout << "vector v1" << v1 << " and v2"<< v2 << " are pararell": cout << "vector v1" << v1 << " and v2" << v2 << " are NOT pararell";
+    try
+    {
+        v1.arePararell(v2) ? cout << "vector v1" << v1 << " and v2" << v2 << " are pararell" : cout << "vector v1" << v1 << " and v2" << v2 << " are NOT pararell";
+    }
+    catch (VectorLengthException areParrarellProblem)
+    {
+        cout << areParrarellProblem.what();
+    }
+    
     cout << endl << endl;
-    v1.arePerpendicular(v2) ? cout << "vector v1" << v1 << " and v2" << v2 << " are perpendicular" : cout << "vector v1" << v1 << " and v2" << v2 << " are NOT perpendicular";
+    try
+    {
+        v1.arePerpendicular(v2) ? cout << "vector v1" << v1 << " and v2" << v2 << " are perpendicular" : cout << "vector v1" << v1 << " and v2" << v2 << " are NOT perpendicular";
+    }
+    catch (VectorLengthException arePerpendicularProblem)
+    {
+        cout << arePerpendicularProblem.what();
+    }
+   
+ 
     return 0;
 }

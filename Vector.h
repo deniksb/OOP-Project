@@ -2,6 +2,7 @@
 #define _VECTOR_H
 #include "Point.h"
 #include <cmath>
+#include "VectorLengthException.h"
 
 class Vector :public Point{
 public:
@@ -21,7 +22,7 @@ public:
 	Vector& operator()(double, double, double, double, double, double);
 	//virtual Vector ins
 	virtual std::ostream& ins(std::ostream&)const;
-	//function for lenght of a vector <==> единичен вектор
+	//function for lenght of a vector <==> single vector
 	double lenghtOfV()const;
 	//direction of a vector
 	Point directionOfV()const;
@@ -31,7 +32,8 @@ public:
 	bool arePararell(const Vector&)const;
 	//perpendicularity of two vectors
 	bool arePerpendicular(const Vector&)const;
-	
+	//printV() <==> prints the vector
+	int printV();
 private:
 	Point A, B, vector;
 
