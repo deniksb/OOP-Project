@@ -40,13 +40,20 @@ public:
 	int printV();
 	//overloading operator + Vectors
 	Vector operator+(const Vector&)const;
+	//overloading operator - Vectors
+	Vector operator-(const Vector&)const;
 
 	//finding the scalar product of 2 vectors
 	double findScalarProduct(const Vector& rhs) const;
+
+	//overloading operator^ vector*vector
+	Vector operator^(const Vector&)const;
 private:
 	//Point A, B, vector;
 	double vX, vY, vZ;
 };
+//overloading operator* double*vector
+Vector operator*(double,const Vector&);
 
 
 

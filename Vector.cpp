@@ -90,6 +90,10 @@ bool Vector::arePerpendicular(const Vector& v1)const {
 Vector Vector::operator+(const Vector& rhs)const {
 	return Vector(getVectorX() + rhs.getVectorX(), getVectorY() + rhs.getVectorY(), getVectorZ() + rhs.getVectorZ());
 }
+//overloading operator - Vectors
+Vector Vector::operator-(const Vector& rhs)const{
+	return Vector(getVectorX()-rhs.getVectorX(),getVectorY()-rhs.getVectorY(),getVectorZ()-rhs.getVectorZ());
+}
 
 //finding the scalar product of 2 vectors
 	double Vector::findScalarProduct(const Vector& rhs) const{
@@ -97,3 +101,12 @@ Vector Vector::operator+(const Vector& rhs)const {
 		return (this->getVectorX()*rhs.getVectorX()) + (this->getVectorY() * rhs.getVectorY()) +  (this->getVectorZ() * rhs.getVectorZ());
 	
 	}
+	//overloading operator^ vector*vector
+	Vector Vector::operator^(const Vector& rhs)const{
+		return Vector(getVectorX()*rhs.getVectorX(),getVectorY()*rhs.getVectorY(),getVectorZ()*rhs.getVectorZ());
+	}
+
+	//overloading operator* double*vector
+Vector operator*(double r,const Vector& rhs){
+	return Vector(r*rhs.getVectorX(),r*rhs.getVectorY(),r*rhs.getVectorZ());
+}
