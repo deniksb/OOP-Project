@@ -54,3 +54,7 @@ Point Point::operator+(const Point& rhs)const {
     return tmpP;
     //return Point(rhs.x-x,rhs.y-y,rhs.z-z);
 }
+
+//operator == Point==Triangle
+bool operator==(const Point& lhs,const Triangle& rhs){
+}

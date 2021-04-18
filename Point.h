@@ -18,9 +18,9 @@ public:
 	double getY()const { return y; }
 	double getZ()const { return z; }
 	//setters
-	int setX(double _x) { x = _x; }
-	int setY(double _y) { y = _y; }
-	int setZ(double _z) { z = _z; }
+	int setX(double _x) { x = _x; return 0;}
+	int setY(double _y) { y = _y; return 0;}
+	int setZ(double _z) { z = _z; return 0;}
 
 	//operator Point == Point : 1?0
 	bool operator==(const Point&) const;
@@ -37,4 +37,6 @@ private:
 std::ostream& operator<<(std::ostream& lhs,const Point& rhs);
 //operator <_cin_> >> <_Point_>
 std::istream& operator>>(std::istream&, Point&);
+//operator == Point==Triangle
+bool operator==(const Point& lhs,const Triangle& rhs);
 #endif

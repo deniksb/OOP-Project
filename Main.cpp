@@ -7,11 +7,11 @@ using namespace std;
 
 int main(){
 
-    Point a(-1,-1,9);
+    Point a(7,6,0);
 
-    Point b(3,1,5);
+    Point b(7,8,0);
     
-    Point c(0,-5,1); 
+    Point c(1,2,0); 
 
 
     // Vector vec1(1,-2,2);
@@ -21,7 +21,7 @@ int main(){
 
     Triangle tri(a,b,c);
     
-    cout << tri.findPerimeter() << endl;
+    cout << tri.findMedicenter() << endl;
 
     
 

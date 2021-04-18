@@ -81,7 +81,7 @@ int Triangle::findType() const
         Vector v1(point1, point2);
         Vector v2(point1, point3);
 
-        Vector cross(v1.findCrossProduct(v2));
+        Vector cross(v1^v2);
 
 
 
@@ -100,5 +100,17 @@ int Triangle::findType() const
         double side3 = v3.lenghtOfV();
 
         return side1 + side2 + side3;
+    }
+
+    //namirame medicentura na triugulnika
+    Point Triangle::findMedicenter() const{
+        
+        double p1 = (point1.getX() + point2.getX() + point3.getX())/3;
+        double p2 = (point1.getY() + point2.getY() + point3.getY())/3; 
+        double p3 = (point1.getZ() + point2.getZ() + point3.getZ())/3;
+
+        Point medicetner(p1, p2, p3);
+ 
+         return medicetner;
     }
 

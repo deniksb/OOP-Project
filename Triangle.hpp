@@ -14,6 +14,24 @@
     //namirame perimetura na triugulnika
     double findPerimeter() const;
 
+    //namirame medicentura na triugulnika
+    Point findMedicenter() const;
+
+    //operator == Point==Triangle
+    friend bool operator==(const Triangle& lhs,const Point& rhs);
+
+    //getters for the 3 points of the triangle
+    Point getA() const{
+        return point1;
+    }
+    Point getB() const{
+        return point2;
+    }
+    Point getC() const{
+        return point3;
+    }
+
+
 
 
     private:
