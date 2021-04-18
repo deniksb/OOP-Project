@@ -21,7 +21,7 @@ int main(){
 
     Triangle tri(a,b,c);
     
-    cout << tri.findMedicenter() << endl;
+    tri.findType();
 
     
 

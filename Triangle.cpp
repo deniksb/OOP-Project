@@ -34,17 +34,17 @@ int Triangle::findType() const
     Vector v1(point1, point2);
     Vector v2(point1, point3);
 
-    angle1 = v1.findScalarProduct(v2);
+    angle1 = v1*v2;
 
     Vector v11(point2, point1);
     Vector v22(point2, point3);
 
-    angle2 = v11.findScalarProduct(v22);
+    angle2 = v11*v22;
 
     Vector v111(point3, point1);
     Vector v222(point3, point2);
 
-    angle3 = v111.findScalarProduct(v222);
+    angle3 = v111*v222;
 
     if (angle1 == angle2 == angle3)
     {

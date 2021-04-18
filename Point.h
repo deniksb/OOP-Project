@@ -38,5 +38,5 @@ std::ostream& operator<<(std::ostream& lhs,const Point& rhs);
 //operator <_cin_> >> <_Point_>
 std::istream& operator>>(std::istream&, Point&);
 //operator == Point==Triangle
-bool operator==(const Point& lhs,const Triangle& rhs);
+// bool operator==(const Point& lhs,const Triangle& rhs);
 #endif

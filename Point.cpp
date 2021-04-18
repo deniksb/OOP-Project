@@ -56,5 +56,5 @@ Point Point::operator+(const Point& rhs)const {
 }
 
 //operator == Point==Triangle
-bool operator==(const Point& lhs,const Triangle& rhs){
-}
+// bool operator==(const Point& lhs,const Triangle& rhs){
+// }
