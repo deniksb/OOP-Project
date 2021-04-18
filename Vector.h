@@ -48,12 +48,16 @@ public:
 
 	//overloading operator^ vector*vector
 	Vector operator^(const Vector&)const;
+	
+	
+
 private:
 	//Point A, B, vector;
 	double vX, vY, vZ;
 };
 //overloading operator* double*vector
 Vector operator*(double,const Vector&);
+
 
 
 

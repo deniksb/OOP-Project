@@ -5,11 +5,14 @@
     public:
     Triangle(Point&,Point&,Point&);
 
-    //namirame tipa na triugulnika TODO
-    int findType() const{
+    //namirame tipa na triugulnika
+    int findType() const;
 
-        return 0;
-    }
+    //namirame liceto na triugulnika
+    double findArea() const;
+
+    //namirame perimetura na triugulnika
+    double findPerimeter() const;
 
 
 

@@ -110,3 +110,5 @@ Vector Vector::operator-(const Vector& rhs)const{
 Vector operator*(double r,const Vector& rhs){
 	return Vector(r*rhs.getVectorX(),r*rhs.getVectorY(),r*rhs.getVectorZ());
 }
+
+	
