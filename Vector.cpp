@@ -96,19 +96,23 @@ Vector Vector::operator-(const Vector& rhs)const{
 }
 
 //finding the scalar product of 2 vectors
-	double Vector::findScalarProduct(const Vector& rhs) const{
+	double Vector::operator*(const Vector& rhs) const{
 		
 		return (this->getVectorX()*rhs.getVectorX()) + (this->getVectorY() * rhs.getVectorY()) +  (this->getVectorZ() * rhs.getVectorZ());
 	
 	}
 	//overloading operator^ vector*vector
 	Vector Vector::operator^(const Vector& rhs)const{
-		return Vector(getVectorY()*rhs.getVectorZ()-getVectorZ()*rhs.getVectorY(),getVectorX()*rhs.getVectorZ()+getVectorZ()*rhs.getVectorX(),getVectorX()*rhs.getVectorY()-getVectorY()*rhs.getVectorX());
+		return Vector(getVectorY()*rhs.getVectorZ()-getVectorZ()*rhs.getVectorY(),-getVectorX()*rhs.getVectorZ()+getVectorZ()*rhs.getVectorX(),getVectorX()*rhs.getVectorY()-getVectorY()*rhs.getVectorX());
 	}
 
 	//overloading operator* double*vector
 Vector operator*(double r,const Vector& rhs){
 	return Vector(r*rhs.getVectorX(),r*rhs.getVectorY(),r*rhs.getVectorZ());
 }
+//overloading operator() mixed product
+double Vector::operator()(const Vector& v,const Vector& w){
+	return ((*this^v)*w);
 
+}
 	
