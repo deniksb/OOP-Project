@@ -8,18 +8,22 @@ class Vector :public Point{
 public:
 	//constructors
 	Vector();
-	Vector(Point,Point);
-	Vector(double, double, double,double, double, double);
+	Vector(const Point&, const Point&);
+	Vector(double, double, double);
 	Vector(const Vector&);
 	~Vector();
 	//getters
-	double getVectorX()const { return vector.getX();}
-	double getVectorY()const { return vector.getY();}
-	double getVectorZ()const { return vector.getZ();}
+	double getVectorX()const { return vX;}
+	double getVectorY()const { return vY; }
+	double getVectorZ()const { return vZ;}
+	//setters
+	/*
+	int setVectorX(double _x) { vX = _x; return 0; }
+	int setVectorX(double _y) { vY = _y; return 0; }
+	int setVectorX(double _z) { vZ = _z; return 0; }
+	*/
 	//overloading operator =  
 	Vector& operator=(const Vector&);
-	//overloading operator <_Vector_>(double,double,double)
-	Vector& operator()(double, double, double, double, double, double);
 	//virtual Vector ins
 	virtual std::ostream& ins(std::ostream&)const;
 	//function for lenght of a vector <==> single vector
@@ -34,9 +38,13 @@ public:
 	bool arePerpendicular(const Vector&)const;
 	//printV() <==> prints the vector
 	int printV();
+	//overloading operator + Vectors
+	Vector operator+(const Vector&)const;
 private:
-	Point A, B, vector;
-
+	//Point A, B, vector;
+	double vX, vY, vZ;
 };
+
+
 
 #endif

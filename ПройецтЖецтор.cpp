@@ -35,7 +35,7 @@ int main() {
     cout << " vector v1" << v1;
     cout << endl;
 
-    Vector v2(3, 4, 1, 5, 0, 2);
+    Vector v2(3, 4, 1);
     cout << " vector v2" << v2;
     cout << endl;
 
@@ -81,7 +81,8 @@ int main() {
     {
         cout << arePerpendicularProblem.what();
     }
-   
- 
+    cout << endl << endl;
+    cout << "v1"<< v1 << " + v2" << v2 << " = " << v1 + v2 << endl;
+    
     return 0;
 }
