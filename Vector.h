@@ -44,12 +44,12 @@ public:
 	Vector operator-(const Vector&)const;
 
 	//finding the scalar product of 2 vectors
-	double findScalarProduct(const Vector& rhs) const;
+	double operator*(const Vector& rhs) const;
 
-	//overloading operator^ vector*vector
+	//overloading operator^ векторно произведение
 	Vector operator^(const Vector&)const;
-	
-	
+	//overloading operator() triple scalar product
+	double operator()(const Vector&,const Vector&);
 
 private:
 	//Point A, B, vector;
