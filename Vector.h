@@ -40,10 +40,15 @@ public:
 	int printV();
 	//overloading operator + Vectors
 	Vector operator+(const Vector&)const;
+	//overloading operator - Vectors
+	Vector operator-(const Vector&)const;
 private:
 	//Point A, B, vector;
 	double vX, vY, vZ;
 };
+//overloading operator* double*vector
+Vector operator*(double,const Vector&);
+
 
 
 
