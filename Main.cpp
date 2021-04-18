@@ -1,24 +1,25 @@
 #include <iostream>
 #include "Triangle.cpp"
+#include "Vector.cpp"
 using namespace std;
 
 
 
 int main(){
 
-    Point p1(2.3,4,5);
+    Point a(2,2,0);
 
-    Point p2(6,7,8);
+    Point b(2,-1,0);
     
     
 
-    Point p3(2.2,4,5);
+    Point c(-1,2,0);
 
-    Point p4(p2);
 
-    Triangle(p1,p2,p4);
+    Vector vec1(a,b);
+    Vector vec2(a,c);
 
-    cout << p3;
+    cout << vec1.findScalarProduct(vec2) << endl;
 
 
 
