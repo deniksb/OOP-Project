@@ -92,7 +92,7 @@ Vector Vector::operator+(const Vector& rhs)const {
 }
 
 //finding the scalar product of 2 vectors
-	int Vector::findScalarProduct(const Vector& rhs) const{
+	double Vector::findScalarProduct(const Vector& rhs) const{
 		
 		return (this->getVectorX()*rhs.getVectorX()) + (this->getVectorY() * rhs.getVectorY()) +  (this->getVectorZ() * rhs.getVectorZ());
 	

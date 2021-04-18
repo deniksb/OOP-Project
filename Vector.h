@@ -42,7 +42,7 @@ public:
 	Vector operator+(const Vector&)const;
 
 	//finding the scalar product of 2 vectors
-	int findScalarProduct(const Vector& rhs) const;
+	double findScalarProduct(const Vector& rhs) const;
 private:
 	//Point A, B, vector;
 	double vX, vY, vZ;
