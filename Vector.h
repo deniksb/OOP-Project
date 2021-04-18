@@ -43,6 +43,10 @@ public:
 
 	//finding the scalar product of 2 vectors
 	double findScalarProduct(const Vector& rhs) const;
+
+	//finding the cross product of 2 Vectors
+	Vector findCrossProduct(const Vector& rhs) const;
+
 private:
 	//Point A, B, vector;
 	double vX, vY, vZ;

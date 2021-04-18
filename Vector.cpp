@@ -97,3 +97,15 @@ Vector Vector::operator+(const Vector& rhs)const {
 		return (this->getVectorX()*rhs.getVectorX()) + (this->getVectorY() * rhs.getVectorY()) +  (this->getVectorZ() * rhs.getVectorZ());
 	
 	}
+
+	//finding the cross product of 2 Vectors
+	Vector Vector::findCrossProduct(const Vector& rhs) const{ 
+		
+		double i = this->getVectorY()*rhs.getVectorZ() - this->getVectorZ()*rhs.getVectorY();
+		double j = this->getVectorZ()*rhs.getVectorX() - this->getVectorX()*rhs.getVectorZ();
+		double k = this->getVectorX()*rhs.getVectorY() - this->getVectorY()*rhs.getVectorX();
+
+		Vector cross(i,j,k);
+
+		return cross;
+	}
