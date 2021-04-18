@@ -103,7 +103,7 @@ Vector Vector::operator-(const Vector& rhs)const{
 	}
 	//overloading operator^ vector*vector
 	Vector Vector::operator^(const Vector& rhs)const{
-		return Vector(getVectorX()*rhs.getVectorX(),getVectorY()*rhs.getVectorY(),getVectorZ()*rhs.getVectorZ());
+		return Vector(getVectorY()*rhs.getVectorZ()-getVectorZ()*rhs.getVectorY(),getVectorX()*rhs.getVectorZ()+getVectorZ()*rhs.getVectorX(),getVectorX()*rhs.getVectorY()-getVectorY()*rhs.getVectorX());
 	}
 
 	//overloading operator* double*vector
