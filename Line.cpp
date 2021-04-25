@@ -1,5 +1,6 @@
 #include "Line.hpp"
 using namespace std;
+#include <math.h> 
 
 Line::Line(const Point& p,const Vector& v):Vector(v){
     pt = p;
@@ -31,4 +32,13 @@ Vector Line::findNormalVector() const{
         Vector normal(0,-(vc.getVectorZ()),vc.getVectorY());
         return normal;
     }
+}
+
+double Line::findAngleBetweenTwoLines(const Line& rhs) const{ 
+    Vector v1 = vc;
+    Vector v2 = rhs.getVector();
+
+    double cosine = (v1*v2) / ((v1.lenghtOfV()) * (v2.lenghtOfV()));
+    double result = acos(cosine);
+    return result;
 }

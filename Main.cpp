@@ -8,9 +8,9 @@ using namespace std;
 
 int main(){
 
-    Point a(7,6,0);
+    Point a(3,2,0);
 
-    Point b(7,8,0);
+    Point b(5,3,0);
     
     Point c(1,2,0); 
 
@@ -19,17 +19,13 @@ int main(){
     // Vector vec2(2,-3,0);
 
     // cout << vec1.findCrossProduct(vec2);
-
-    Line l1(a,b);
-
-    Vector vtest(l1.getVector());
-
-    cout << vtest*l1.findNormalVector();
+    Vector v1(2,1,1);
+    Vector v2(2,2,2);
+    Line l1(a,v1);
+    Line l2(b,v2);
 
 
-
-    
-
+    cout << l1.findAngleBetweenTwoLines(l2);
 
 
     return 0;

@@ -17,6 +17,9 @@ Vector findDirection() const;
 //намираме нормалния вектор на праватта линия
 Vector findNormalVector() const;
 
+//намираме ъгъла между две прави
+double findAngleBetweenTwoLines(const Line&) const;
+
 //getters
 Vector getVector() const{ return vc;}
 Point getPoint() const{ return pt;}
