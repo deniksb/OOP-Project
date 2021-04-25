@@ -42,3 +42,16 @@ double Line::findAngleBetweenTwoLines(const Line& rhs) const{
     double result = acos(cosine);
     return result;
 }
+
+bool Line::operator+(const Point& rhs) const{ 
+    double equationX = ((rhs.getX() - pt.getX())/vc.getVectorX());
+    double equationY = ((rhs.getY() - pt.getY())/vc.getVectorY());
+    double equationZ = ((rhs.getZ() - pt.getZ())/vc.getVectorZ());
+
+    if(equationX == 0 && equationY== 0 && equationZ==0){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
