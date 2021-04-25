@@ -14,6 +14,9 @@ Line(const Line&);
 //намираме посоката на правата линия
 Vector findDirection() const;
 
+//намираме нормалния вектор на праватта линия
+Vector findNormalVector() const;
+
 //getters
 Vector getVector() const{ return vc;}
 Point getPoint() const{ return pt;}

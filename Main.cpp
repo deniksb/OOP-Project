@@ -20,10 +20,13 @@ int main(){
 
     // cout << vec1.findCrossProduct(vec2);
 
-   
     Line l1(a,b);
 
-    cout << l1.findDirection();
+    Vector vtest(l1.getVector());
+
+    cout << vtest*l1.findNormalVector();
+
+
 
     
 
