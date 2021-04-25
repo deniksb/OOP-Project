@@ -55,3 +55,11 @@ bool Line::operator+(const Point& rhs) const{
         return false;
     }
 }
+
+//|| operator проверка дали две прави са успоредни
+bool operator||(const Line& lhs,const Line& rhs){ 
+    Vector crossProd(lhs.getVector()^rhs.getVector());
+    
+    //ako e nulev vektor znachi 2ta vektora sa usporedni i ot tam i pravite
+    return crossProd.isNullVector();
+}

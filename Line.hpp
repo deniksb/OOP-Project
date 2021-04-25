@@ -23,6 +23,9 @@ double findAngleBetweenTwoLines(const Line&) const;
 //+ operator проверка дали точка лежи на дадена права
 bool operator+(const Point&) const;
 
+//|| operator проверка дали две прави са успоредни
+friend bool operator||(const Line&,const Line&);
+
 //getters
 Vector getVector() const{ return vc;}
 Point getPoint() const{ return pt;}

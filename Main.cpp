@@ -19,13 +19,14 @@ int main(){
     // Vector vec2(2,-3,0);
 
     // cout << vec1.findCrossProduct(vec2);
-    Vector v1(1,2,3);
+    Vector v1(1,1,1);
     Vector v2(2,2,2);
     Line l1(a,v1);
     Line l2(b,v2);
 
 
-    cout << l2+c;
+     cout << (l1|| l2);
+
 
 
     return 0;
