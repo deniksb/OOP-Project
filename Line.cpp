@@ -63,3 +63,39 @@ bool operator||(const Line& lhs,const Line& rhs){
     //ako e nulev vektor znachi 2ta vektora sa usporedni i ot tam i pravite
     return crossProd.isNullVector();
 }
+//operator== дали две прави съвпадат
+bool operator==(const Line& lhs,const Line& rhs){
+    
+    Vector v1(lhs.getPoint(),rhs.getPoint());
+
+    if( (lhs.getVector().arePararell(rhs.getVector())) && (v1.arePararell(lhs.getVector()))  && (v1.arePararell(rhs.getVector())) ){
+        return true;
+    }
+    return false;
+    
+
+}
+//operator&& дали се пресичат
+bool operator&&(const Line&lhs, const Line& rhs){
+    if(lhs.getPoint()==rhs.getPoint()){
+        return true;
+    }
+    return false;
+
+}
+
+//operator!= дали са кръстосани
+bool operator!=(const Line& lhs,const Line& rhs){
+    if(!(lhs==rhs) && !(lhs||rhs) && !(lhs&&rhs) ){
+        return true;
+    }
+    return false;
+}
+
+//operator | дали са перпендикулярни
+bool operator|(const Line& lhs,const Line& rhs){
+    if((lhs.getVector()).arePerpendicular(rhs.getVector())){
+        return true;
+    }
+    return false;
+}
