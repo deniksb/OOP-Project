@@ -12,9 +12,11 @@ int main(){
     Point b(3,2,1);
     Segment s1(a,b);
 
-    Segment s2(s1);
+    Segment s2;
+
+    s2 = s1;
     
-    cout << s1;
+    cout << s2;
    
 
 
