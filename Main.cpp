@@ -1,31 +1,21 @@
 #include <iostream>
 #include "Triangle.cpp"
 #include "Vector.cpp"
-#include "Line.cpp"
+#include "Segment.cpp"
 using namespace std;
 
 
 
 int main(){
 
-    Point a(2,3,4);
+    Point a(1,2,3);
+    Point b(3,2,1);
+    Segment s1(a,b);
 
-    Point b(5,3,0);
+    Segment s2(s1);
     
-    Point c(7,2,4); 
-
-
-    // Vector vec1(1,-2,2);
-    // Vector vec2(2,-3,0);
-
-    // cout << vec1.findCrossProduct(vec2);
-    Vector v1(1,1,1);
-    Vector v2(2,2,2);
-    Line l1(a,v1);
-    Line l2(b,v2);
-
-
-     cout << (l1|| l2);
+    cout << s1;
+   
 
 
 

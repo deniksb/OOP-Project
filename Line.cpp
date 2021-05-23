@@ -2,6 +2,11 @@
 using namespace std;
 #include <math.h> 
 
+Line::Line(){
+    vc = Vector(0,0,0);
+    pt = Point(0,0,0);
+}
+
 Line::Line(const Point& p,const Vector& v):Vector(v){
     pt = p;
     vc = v;

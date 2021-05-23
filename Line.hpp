@@ -3,6 +3,7 @@
 class Line : public Vector {
 public:
 
+Line();
 //инициализация чрез точка и вектор
 Line(const Point&,const Vector&);
 //инициализация чрез две точки
