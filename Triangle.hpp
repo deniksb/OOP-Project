@@ -38,3 +38,5 @@
     Point point1,point2,point3;
 
 };
+
+ std::ostream &operator<<(std::ostream&,const Triangle&);

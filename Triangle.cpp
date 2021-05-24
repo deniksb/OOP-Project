@@ -114,3 +114,8 @@ int Triangle::findType() const
          return medicetner;
     }
 
+    std::ostream &operator<<(std::ostream& os,const Triangle& tr){
+         os << "Triangle: " <<tr.getA() <<  tr.getB() <<  tr.getC() ;
+        return os;
+    }
+

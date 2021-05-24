@@ -29,7 +29,7 @@ public:
 	//function for lenght of a vector <==> single vector
 	double lenghtOfV()const;
 	//direction of a vector
-	Point directionOfV()const;
+	Vector directionOfV()const;
 	//is it NULL vector
 	bool isNullVector()const;
 	//parallelism of two vectors
@@ -52,6 +52,8 @@ public:
 	double operator()(const Vector&,const Vector&);
 	//projection of a vector a on b
 	Vector Projection(const Vector &, const Vector &) const;
+	
+	virtual std::istream& ext(std::istream&);
 
 private:
 	//Point A, B, vector;
@@ -59,7 +61,7 @@ private:
 };
 //overloading operator* double*vector
 Vector operator*(double,const Vector&);
-
+std::istream& operator>>(std::istream&, Vector&);
 
 
 

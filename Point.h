@@ -1,8 +1,9 @@
 #ifndef _POINT_H
 #define _POINT_H
 #include <iostream>
+#include "Element.hpp"
 
-class Point {
+class Point: public Element{
 public:
 	//constructors
 	Point(double = 0, double = 0, double = 0);
@@ -13,6 +14,10 @@ public:
 	Point& operator=(const Point&);
 	//overloading operator +
 	Point operator+(const Point&)const;
+	//overriding print function from Element
+	void print(){
+		std::cout << "(" << x << "," << y << "," << z << ")";
+	};
 	//getters
 	double getX()const { return x; }
 	double getY()const { return y; }

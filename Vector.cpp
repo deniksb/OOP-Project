@@ -49,12 +49,12 @@ double Vector::lenghtOfV()const {
 }
 
 //direction of a vector
-Point Vector::directionOfV()const {
+Vector Vector::directionOfV()const {
 	if (lenghtOfV()==0)
 	{
 		// throw VectorLengthException("Direction of this Vector has the Lenght of 0! There for this action can't be performed.");
 	}
-	return Point(vX / (lenghtOfV()), vY / (lenghtOfV()), vZ / (lenghtOfV()));
+	return Vector(vX / (lenghtOfV()), vY / (lenghtOfV()), vZ / (lenghtOfV()));
 }
 
 //is it NULL vector
@@ -73,7 +73,15 @@ bool Vector::arePararell(const Vector& v1)const {
 	{
 		// throw VectorLengthException("Vector lenght is 0! There for this action can't be performed. ");
 	}
-	return (vX / v1.vX) == 0 && (vY / v1.vY) == 0 && (vZ / v1.vZ) == 0;
+	double x = vX/v1.getVectorX();
+	double y = vY/v1.getVectorY();
+	double z = vZ/v1.getVectorZ();
+	if(x == y && y == z && z == x){
+		return true;
+	}
+	else {
+		return false;
+	}
 }
 
 //perpendicularity of two vectors
@@ -119,5 +127,24 @@ double Vector::operator()(const Vector& v,const Vector& w){
 //projection of a vector u on v
 Vector Vector::Projection(const Vector & u, const Vector & v)const{
 	return Vector((((u*v) / pow(v.lenghtOfV(), 2))*v));
+}
+
+//virtual Vector ext
+std::istream& Vector::ext(std::istream& in) {
+    std::cout << " \n x = ";
+    in >> vX;
+    std::cout << "\n y = ";
+    in >> vY;
+    std::cout << "\n z = ";
+    in >> vZ;
+    std::cout << std::endl;
+return in;
+    }
+
+//overloading right shift
+std::istream& operator>>(std::istream& lhs, Vector& rhs){
+	
+ return rhs.ext(lhs);
+
 }
 	

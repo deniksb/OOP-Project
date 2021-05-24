@@ -115,3 +115,8 @@ bool operator|(const Line& lhs,const Line& rhs){
     }
     return false;
 }
+
+std::ostream& operator<<(std::ostream& lhs,const Line& rhs){
+    lhs << "(Vector: " << rhs.getVector() << ", Point:" << rhs.getPoint() << ")" << endl;
+    return lhs;
+}

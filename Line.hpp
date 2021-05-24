@@ -45,8 +45,13 @@ friend bool operator|(const Line&,const Line&);
 Vector getVector() const{ return vc;}
 Point getPoint() const{ return pt;}
 
+//extractor and right shift
+
+
 
 private:
 Vector vc;
 Point pt;
 };
+
+std::ostream& operator<<(std::ostream& lhs,const Line& rhs);
