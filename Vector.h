@@ -50,6 +50,8 @@ public:
 	Vector operator^(const Vector&)const;
 	//overloading operator() triple scalar product
 	double operator()(const Vector&,const Vector&);
+	//projection of a vector a on b
+	Vector Projection(const Vector &, const Vector &) const;
 
 private:
 	//Point A, B, vector;

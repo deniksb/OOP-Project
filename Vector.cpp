@@ -116,4 +116,8 @@ double Vector::operator()(const Vector& v,const Vector& w){
 	return ((*this^v)*w);
 
 }
+//projection of a vector u on v
+Vector Vector::Projection(const Vector & u, const Vector & v)const{
+	return Vector((((u*v) / pow(v.lenghtOfV(), 2))*v));
+}
 	
