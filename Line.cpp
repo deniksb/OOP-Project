@@ -2,7 +2,7 @@
 using namespace std;
 #include <math.h> 
 
-Line::Line(){
+Line::Line():Vector(){
     vc = Vector(0,0,0);
     pt = Point(0,0,0);
 }
@@ -21,6 +21,17 @@ Line::Line(const Point& p1, const Point& p2):Vector(p1,p2){
 Line::Line(const Line& rhs):Vector(rhs.getVector()){ 
     pt = rhs.getPoint();
     vc = rhs.getVector();
+}
+
+Line::~Line(){}
+
+Line& Line::operator=(const Line & rhs){
+    if(this!=&rhs){
+        Vector::operator=(rhs);
+        vc=rhs.vc;
+        pt=rhs.pt;
+    }
+    return *this;
 }
 
 Vector Line::findDirection() const{

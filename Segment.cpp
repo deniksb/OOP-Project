@@ -21,6 +21,7 @@ Segment::~Segment(){}
 Segment& Segment::operator=(const Segment& rhs){
 
     if(this!=&rhs){
+        Line::operator=(rhs);
     a = rhs.a;
     b = rhs.b;
     }

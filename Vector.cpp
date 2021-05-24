@@ -19,6 +19,7 @@ Vector::~Vector() {}
 Vector& Vector::operator=(const Vector& rhs) {
 	if (this!=&rhs)
 	{
+		Point::operator=(rhs);
 		vX = rhs.vX;
 		vY = rhs.vY;
 		vZ = rhs.vZ;

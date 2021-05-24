@@ -11,7 +11,10 @@ Line(const Point&, const Point&);
 
 //copy constructor
 Line(const Line&);
-
+//destructor
+~Line();
+//operator= part of big 5
+Line& operator=(const Line &);
 //намираме посоката на правата линия
 Vector findDirection() const;
 
