@@ -19,8 +19,12 @@ b = p2;
 Segment::~Segment(){}
 
 Segment& Segment::operator=(const Segment& rhs){
+
+    if(this!=&rhs){
     a = rhs.a;
     b = rhs.b;
+    }
+    return *this;
 }
 
 
@@ -34,9 +38,9 @@ double Segment::findLength() const {
 
 Point Segment::findCenter() const{
 
-    int x =  (a.getX() + b.getX())/2;
-    int y =  (a.getY() + b.getY())/2;
-    int z =  (a.getZ() + b.getZ())/2;
+    double x =  (a.getX() + b.getX())/2;
+    double y =  (a.getY() + b.getY())/2;
+    double z =  (a.getZ() + b.getZ())/2;
 
     Point center(x,y,z);
     return center;

@@ -21,11 +21,11 @@ Point findCenter() const;
 bool operator==(const  Point& rhs) const{
     Vector ab(a,b);
     double t1 = (rhs.getX() - a.getX()) / ab.getVectorX(); 
-    cout << t1 << endl;
+    //cout << t1 << endl;
     double t2 = (rhs.getY() - a.getY()) / ab.getVectorY(); 
-    cout << t2 << endl;
+    //cout << t2 << endl;
     double t3 = (rhs.getZ() - a.getZ()) / ab.getVectorZ();
-    cout << t3 << endl;
+   // cout << t3 << endl;
     
     if(((t1 >= 0 && t1 <= 1) || isnan(t1))  && ((t2 >= 0 && t2 <= 1) || isnan(t2)) && ((t3 >= 0 && t3 <= 1) || isnan(t3))){
         return true;
