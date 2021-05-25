@@ -10,8 +10,8 @@ void printGreetings();
 
 int main() {
 
-	int storage[100];
-
+	double storage[100];
+	
 	ifstream inputFile;
 	inputFile.open("input.txt");
 	int count = 0;
@@ -24,8 +24,6 @@ int main() {
 	// 	cout << storage[i] << endl;
 	// }
 	
-	
-
 	//изброяваме елементите записани в масива с данни от файла
 	int elem = 0;
 
@@ -109,6 +107,8 @@ int main() {
 					cin >> command2;
 					
 					if (command2 == 'y') {
+						mode = 1;
+						elem = 0;
 						continue;
 					}
 					else {
@@ -421,6 +421,8 @@ int main() {
 				char command2;
 				cin >> command2;
 				if (command2 == 'y') {
+					mode = 1;
+					elem = 0;
 					continue;
 				}
 				else {
@@ -788,6 +790,8 @@ int main() {
 				char command2;
 				cin >> command2;
 				if (command2 == 'y') {
+					mode = 1;
+					elem = 0;
 					continue;
 				}
 				else {
@@ -886,6 +890,8 @@ int main() {
 				char command2;
 				cin >> command2;
 				if (command2 == 'y') {
+					mode = 1;
+					elem = 0;
 					continue;
 				}
 				else {

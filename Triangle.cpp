@@ -5,7 +5,8 @@ using namespace std;
 
 Triangle::Triangle(Point &p1, Point &p2, Point &p3)
 {
-    if (p1 == p2)
+    try{
+         if (p1 == p2)
     {
         throw EqualPointException("Points 1 and 2 are matching!");
     }
@@ -23,6 +24,11 @@ Triangle::Triangle(Point &p1, Point &p2, Point &p3)
         point2 = p2;
         point3 = p3;
     }
+    }
+    catch( exception& e ){
+        cout << e.what() << endl;
+    }
+   
 }
 
 //namirame tipa na triugulnika TODO
