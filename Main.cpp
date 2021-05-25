@@ -442,16 +442,43 @@ int main() {
 			cout << "How do you want to initialize the line?" << endl;
 			cout << "1-Two Points" << endl;
 			cout << "2-Point and Vector" << endl;
-			cin >> command;
+			if(mode == 0){
+				command = storage[elem];
+				elem++;
+			}
+			else {
+				cin >> command;
+			}
+			
 			Line l;
 			if (command == 1) {
 				cout << "Enter values for the X,Y,Z coordinates of the 1st Point: " << endl;
 				Point a;
-				cin >> a;
+			if(mode == 0){
+				a.setX(storage[elem]);
+				elem++;
+				a.setY(storage[elem]);
+				elem++;
+				a.setZ(storage[elem]);
+				elem++;
+			}
+			else {
+			cin >> a;	
+			}
 				cout << a << endl;
 				cout << "Enter values for the X,Y,Z coordinates of the 2nd Point: " << endl;
 				Point b;
-				cin >> b;
+			if(mode == 0){
+				b.setX(storage[elem]);
+				elem++;
+				b.setY(storage[elem]);
+				elem++;
+				b.setZ(storage[elem]);
+				elem++;
+			}
+			else {
+			cin >> b;	
+			}
 				cout << b << endl;
 
 				Line l2(a, b);
@@ -461,11 +488,31 @@ int main() {
 			else if (command == 2) {
 				cout << "Enter values for the X,Y,Z coordinates of the 1st Point: " << endl;
 				Point a;
-				cin >> a;
+			if(mode == 0){
+				a.setX(storage[elem]);
+				elem++;
+				a.setY(storage[elem]);
+				elem++;
+				a.setZ(storage[elem]);
+				elem++;
+			}
+			else {
+			cin >> a;	
+			}
 				cout << a << endl;
 				cout << "Enter values for the X,Y,Z coordinates of the Vector: " << endl;
 				Vector b;
-				cin >> b;
+			if(mode == 0){
+				b.setVectorX(storage[elem]);
+				elem++;
+				b.setVectorY(storage[elem]);
+				elem++;
+				b.setVectorZ(storage[elem]);
+				elem++;
+			}
+			else {
+			cin >> b;	
+			}
 				cout << b << endl;
 				Line l2(a, b);
 				l = l2;
@@ -484,7 +531,13 @@ int main() {
 				cout << "8-Are the lines crossed?" << endl;
 				cout << "9-Are the lines perpendicular" << endl;
 
-				cin >> command;
+				if(mode == 0){
+					command = storage[elem];
+					elem++;
+				}
+				else {
+				cin >> command;	
+				}
 
 				switch (command) {
 				case 1:
@@ -496,11 +549,31 @@ int main() {
 				{
 					cout << "Enter values for the X,Y,Z coordinates of the 1st Point: " << endl;
 					Point a;
-					cin >> a;
+					if(mode == 0){
+						a.setX(storage[elem]);
+						elem++;
+						a.setY(storage[elem]);
+						elem++;
+						a.setZ(storage[elem]);
+						elem++;
+					}
+					else {
+					cin >> a;	
+					}
 					cout << a << endl;
 					cout << "Enter values for the X,Y,Z coordinates of the Vector: " << endl;
 					Vector b;
-					cin >> b;
+					if(mode == 0){
+					b.setVectorX(storage[elem]);
+					elem++;
+					b.setVectorY(storage[elem]);
+					elem++;
+					b.setVectorZ(storage[elem]);
+					elem++;
+					}
+					else {
+					cin >> b;	
+					}
 					cout << b << endl;
 					Line l2(a, b);
 					cout << l.findAngleBetweenTwoLines(l2) << endl;
@@ -510,7 +583,17 @@ int main() {
 				{
 					cout << "Enter values for the X,Y,Z coordinates of the Point: " << endl;
 					Point a;
-					cin >> a;
+					if(mode == 0){
+						a.setX(storage[elem]);
+						elem++;
+						a.setY(storage[elem]);
+						elem++;
+						a.setZ(storage[elem]);
+						elem++;
+					}
+					else {
+					cin >> a;	
+					}
 					cout << a << endl;
 					if (l + a) {
 						cout << "The point is on the line!" << endl;
@@ -522,11 +605,31 @@ int main() {
 				{
 					cout << "Enter values for the X,Y,Z coordinates of the 1st Point: " << endl;
 					Point a;
-					cin >> a;
+					if(mode == 0){
+						a.setX(storage[elem]);
+						elem++;
+						a.setY(storage[elem]);
+						elem++;
+						a.setZ(storage[elem]);
+						elem++;
+					}
+					else {
+					cin >> a;	
+					}
 					cout << a << endl;
 					cout << "Enter values for the X,Y,Z coordinates of the Vector: " << endl;
 					Vector b;
-					cin >> b;
+					if(mode == 0){
+					b.setVectorX(storage[elem]);
+					elem++;
+					b.setVectorY(storage[elem]);
+					elem++;
+					b.setVectorZ(storage[elem]);
+					elem++;
+					}
+					else {
+					cin >> b;	
+					}
 					cout << b << endl;
 					Line l2(a, b);
 					if (l || l2) {
@@ -539,11 +642,31 @@ int main() {
 
 					cout << "Enter values for the X,Y,Z coordinates of the 1st Point: " << endl;
 					Point a;
-					cin >> a;
+					if(mode == 0){
+						a.setX(storage[elem]);
+						elem++;
+						a.setY(storage[elem]);
+						elem++;
+						a.setZ(storage[elem]);
+						elem++;
+					}
+					else {
+					cin >> a;	
+					}
 					cout << a << endl;
 					cout << "Enter values for the X,Y,Z coordinates of the Vector: " << endl;
 					Vector b;
-					cin >> b;
+					if(mode == 0){
+					b.setVectorX(storage[elem]);
+					elem++;
+					b.setVectorY(storage[elem]);
+					elem++;
+					b.setVectorZ(storage[elem]);
+					elem++;
+					}
+					else {
+					cin >> b;	
+					}
 					cout << b << endl;
 					Line l2(a, b);
 					if (l == l2) {
@@ -555,11 +678,31 @@ int main() {
 				case 7: {
 					cout << "Enter values for the X,Y,Z coordinates of the 1st Point: " << endl;
 					Point a;
-					cin >> a;
+					if(mode == 0){
+						a.setX(storage[elem]);
+						elem++;
+						a.setY(storage[elem]);
+						elem++;
+						a.setZ(storage[elem]);
+						elem++;
+					}
+					else {
+					cin >> a;	
+					}
 					cout << a << endl;
 					cout << "Enter values for the X,Y,Z coordinates of the Vector: " << endl;
 					Vector b;
-					cin >> b;
+					if(mode == 0){
+					b.setVectorX(storage[elem]);
+					elem++;
+					b.setVectorY(storage[elem]);
+					elem++;
+					b.setVectorZ(storage[elem]);
+					elem++;
+					}
+					else {
+					cin >> b;	
+					}
 					cout << b << endl;
 					Line l2(a, b);
 					if (l && l2) {
@@ -571,11 +714,31 @@ int main() {
 				case 8: {
 					cout << "Enter values for the X,Y,Z coordinates of the 1st Point: " << endl;
 					Point a;
-					cin >> a;
+					if(mode == 0){
+						a.setX(storage[elem]);
+						elem++;
+						a.setY(storage[elem]);
+						elem++;
+						a.setZ(storage[elem]);
+						elem++;
+					}
+					else {
+					cin >> a;	
+					}
 					cout << a << endl;
 					cout << "Enter values for the X,Y,Z coordinates of the Vector: " << endl;
 					Vector b;
-					cin >> b;
+					if(mode == 0){
+					b.setVectorX(storage[elem]);
+					elem++;
+					b.setVectorY(storage[elem]);
+					elem++;
+					b.setVectorZ(storage[elem]);
+					elem++;
+					}
+					else {
+					cin >> b;	
+					}
 					cout << b << endl;
 					Line l2(a, b);
 					if (l != l2) {
@@ -587,11 +750,31 @@ int main() {
 				case 9: {
 					cout << "Enter values for the X,Y,Z coordinates of the 1st Point: " << endl;
 					Point a;
-					cin >> a;
+					if(mode == 0){
+						a.setX(storage[elem]);
+						elem++;
+						a.setY(storage[elem]);
+						elem++;
+						a.setZ(storage[elem]);
+						elem++;
+					}
+					else {
+					cin >> a;	
+					}
 					cout << a << endl;
 					cout << "Enter values for the X,Y,Z coordinates of the Vector: " << endl;
 					Vector b;
-					cin >> b;
+					if(mode == 0){
+					b.setVectorX(storage[elem]);
+					elem++;
+					b.setVectorY(storage[elem]);
+					elem++;
+					b.setVectorZ(storage[elem]);
+					elem++;
+					}
+					else {
+					cin >> b;	
+					}
 					cout << b << endl;
 					Line l2(a, b);
 					if (l | l2) {
@@ -611,6 +794,8 @@ int main() {
 					cout << "Choose another geometric object? y/n" << endl;
 					cin >> command2;
 					if (command2 == 'y') {
+						elem = 0;
+						mode = 1;
 						break;
 					}
 					else {
@@ -624,11 +809,31 @@ int main() {
 		Segment s;
 			cout << "Enter values for the X,Y,Z coordinates of the 1st Point: " << endl;
 			Point a;
-			cin >> a;
+			if(mode == 0){
+				a.setX(storage[elem]);
+				elem++;
+				a.setY(storage[elem]);
+				elem++;
+				a.setZ(storage[elem]);
+				elem++;
+			}
+			else {
+			cin >> a;	
+			}
 			cout << a << endl;
 			cout << "Enter values for the X,Y,Z coordinates of the 2nd Point: " << endl;
 			Point b;
-			cin >> b;
+			if(mode == 0){
+				b.setX(storage[elem]);
+				elem++;
+				b.setY(storage[elem]);
+				elem++;
+				b.setZ(storage[elem]);
+				elem++;
+			}
+			else {
+			cin >> b;	
+			}
 			cout << b << endl;
 			Segment s2(a, b);
 			s = s2;
@@ -639,7 +844,14 @@ int main() {
 				cout << "1-Segment length" << endl;
 				cout << "2-Find the middle of a segment" << endl;
 				cout << "3-Check if a point is on the Segment" << endl;
-				cin >> command;
+				if(mode == 0){
+					command = storage[elem];
+					elem++;
+				}
+				else {
+					cin >> command;
+				}
+				
 				switch (command) {
 				case 1:
 					cout << s.findLength() << endl;
@@ -650,7 +862,17 @@ int main() {
 				case 3: {
 					cout << "Enter values for the X,Y,Z coordinates of the Point: " << endl;
 					Point a;
-					cin >> a;
+					if(mode == 0){
+					a.setX(storage[elem]);
+					elem++;
+					a.setY(storage[elem]);
+					elem++;
+					a.setZ(storage[elem]);
+					elem++;
+					}
+					else {
+					cin >> a;	
+					}
 					cout << a << endl;
 					if (s == a) {
 						cout << "The point is on the segment!\n";
@@ -670,6 +892,8 @@ int main() {
 					cout << "Choose another geometric object? y/n" << endl;
 					cin >> command2;
 					if (command2 == 'y') {
+						elem = 0;
+						mode = 1;
 						break;
 					}
 					else {
@@ -708,7 +932,7 @@ int main() {
 
 void printGreetings(){
 		    cout << R"(
- ____  _____   ___   _______  _   _  ___       _______ 
+ ____   _____   ___   _______  _   _  ___      _______ 
 | ___ \/ _ \ \ / / | / /  _  || | | |/ _ \    / /____ |
 | |_/ / /_\ \ V /| |/ /| | | || | | / /_\ \  / /    / /
 |    /|  _  |\ / |    \| | | || | | |  _  | < <     \ \
