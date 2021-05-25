@@ -114,8 +114,20 @@ int Triangle::findType() const
          return medicetner;
     }
 
+    
+
     std::ostream &operator<<(std::ostream& os,const Triangle& tr){
          os << "Triangle: " <<tr.getA() <<  tr.getB() <<  tr.getC() ;
         return os;
+    }
+
+     bool operator==(const Triangle& lhs,const Point& rhs){
+         
+       
+    }
+
+    //operator <Point<Triangle дали лежи в триъгълника
+    bool operator<(const Point& lhs, const Triangle& rhs){
+        
     }
 

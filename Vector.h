@@ -17,11 +17,10 @@ public:
 	double getVectorY()const { return vY; }
 	double getVectorZ()const { return vZ;}
 	//setters
-	/*
 	int setVectorX(double _x) { vX = _x; return 0; }
-	int setVectorX(double _y) { vY = _y; return 0; }
-	int setVectorX(double _z) { vZ = _z; return 0; }
-	*/
+	int setVectorY(double _y) { vY = _y; return 0; }
+	int setVectorZ(double _z) { vZ = _z; return 0; }
+	
 	//overloading operator =  
 	Vector& operator=(const Vector&);
 	//virtual Vector ins

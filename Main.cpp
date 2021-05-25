@@ -1,36 +1,103 @@
 #include <iostream>
-#include "Triangle.cpp"
+#include <fstream>
 #include "Vector.cpp"
+#include "Triangle.cpp"
 #include "Segment.cpp"
-
 using namespace std;
 
+void printGreetings();
 
 
 int main() {
 
+	int storage[100];
+
+	ifstream inputFile;
+	inputFile.open("input.txt");
+	int count = 0;
+	while(!inputFile.eof()){
+		inputFile >> storage[count];
+		count++;
+	}
+
+	// for(int i = 0; i < count;i++){
+	// 	cout << storage[i] << endl;
+	// }
+	
+	
+
+	//изброяваме елементите записани в масива с данни от файла
+	int elem = 0;
+
 	int command;
+
+	//FILE MODE = 0 / CONSOLE INPUT MODE = 1
+	int mode;
+	printGreetings();
+	
+		
 	do {
+		cout << "Select a mode:" << endl;
+		cout << "0-File input" << endl;
+		cout << "1-Console input" << endl;
+		cin >> mode;
 		cout << "Choose a geometric object: " << endl;
 		cout << "1-Point" << endl;
 		cout << "2-Vector" << endl;
 		cout << "3-Line" << endl;
 		cout << "4-Segment" << endl;
 		cout << "5-Triangle" << endl;
-		cin >> command;
+		if(mode == 0){
+			command = storage[elem];
+			elem++;
+		}
+		else {
+			cin >> command;
+		}
 		if (command == 1) {
+			
 			cout << "Enter values for the X,Y,Z coordinates of the Point: " << endl;
 			Point a;
-			cin >> a;
+			if(mode == 0){
+				a.setX(storage[elem]);
+				elem++;
+				a.setY(storage[elem]);
+				elem++;
+				a.setZ(storage[elem]);
+				elem++;
+			}
+			else {
+			cin >> a;	
+			}
+			
 			cout << a << endl;
 			while (true) {
 				cout << "Choose an operation: " << endl;
 				cout << "1-Compare to another point" << endl;
-				cin >> command;
+				if(mode == 0){
+				command = storage[elem];
+				elem++;	
+				}
+				else {
+				cin >> command;	
+				}
+				
 				if (command == 1) {
 					cout << "Enter values for the X,Y,Z coordinates of the other Point: " << endl;
 					Point b;
-					cin >> b;
+					if(mode == 0){
+					b.setX(storage[elem]);
+					elem++;
+					b.setY(storage[elem]);
+					elem++;
+					b.setZ(storage[elem]);
+					elem++;
+					}
+					else {
+					cin >> b;	
+					}
+					cout << b << endl;
+					
 					if (a == b) {
 						cout << "Points are equal!" << endl;
 					}
@@ -40,6 +107,7 @@ int main() {
 					cout << "Choose another operation? y/n" << endl;
 					char command2;
 					cin >> command2;
+					
 					if (command2 == 'y') {
 						continue;
 					}
@@ -47,6 +115,8 @@ int main() {
 						cout << "Choose another geometric object? y/n" << endl;
 						cin >> command2;
 						if (command2 == 'y') {
+							mode = 1;
+							elem = 0;
 							break;
 						}
 						else {
@@ -61,16 +131,45 @@ int main() {
 			cout << "How do you want to initialize the vector?" << endl;
 			cout << "1-Two Points" << endl;
 			cout << "2-X,Y,Z coordinates" << endl;
-			cin >> command;
+			if(mode == 0){
+				command = storage[elem];
+				elem++;
+			}
+			else {
+				cin >> command;
+			}
+			
 			Vector v;
 			if (command == 1) {
 				cout << "Enter values for the X,Y,Z coordinates of the 1st Point: " << endl;
 				Point a;
+				if(mode == 0){
+				a.setX(storage[elem]);
+				elem++;
+				a.setY(storage[elem]);
+				elem++;
+				a.setZ(storage[elem]);
+				elem++;
+			}
+			else {
 				cin >> a;
+			}
+				
 				cout << a << endl;
 				cout << "Enter values for the X,Y,Z coordinates of the 2nd Point: " << endl;
 				Point b;
+				if(mode == 0){
+				b.setX(storage[elem]);
+				elem++;
+				b.setY(storage[elem]);
+				elem++;
+				b.setZ(storage[elem]);
+				elem++;
+			}
+			else {
 				cin >> b;
+			}
+				
 				cout << b << endl;
 				Vector v2(a, b);
 				v = v2;
@@ -80,7 +179,18 @@ int main() {
 			else if (command == 2) {
 				cout << "Enter values for the X,Y,Z coordinates of the Vector: " << endl;
 				Vector v2;
+				if(mode == 0){
+				v2.setVectorX(storage[elem]);
+				elem++;
+				v2.setVectorY(storage[elem]);
+				elem++;
+				v2.setVectorZ(storage[elem]);
+				elem++;
+			}
+			else {
 				cin >> v2;
+			}
+				
 				v = v2;
 				cout << v << endl;
 			}
@@ -99,7 +209,13 @@ int main() {
 				cout << "11-Mixed product" << endl;
 				cout << "12-Projection of vector a on b" << endl;
 
-				cin >> command;
+				if(mode == 0){
+					command = storage[elem];
+					elem++;
+				}
+				else {
+				cin >> command;	
+				}
 
 				switch (command) {
 				case 1:
@@ -118,7 +234,17 @@ int main() {
 				{
 					cout << "Enter values for the X,Y,Z coordinates of the 2nd Vector: " << endl;
 					Vector v2;
-					cin >> v2;
+						if(mode == 0){
+						v2.setVectorX(storage[elem]);
+						elem++;
+						v2.setVectorY(storage[elem]);
+						elem++;
+						v2.setVectorZ(storage[elem]);
+						elem++;
+					}
+					else {
+						cin >> v2;
+					}
 					if (v.arePararell(v2)) {
 						cout << "The vectors are parallel." << endl;
 					}
@@ -132,7 +258,17 @@ int main() {
 				{
 					cout << "Enter values for the X,Y,Z coordinates of the 2nd Vector: " << endl;
 					Vector v2;
-					cin >> v2;
+					if(mode == 0){
+						v2.setVectorX(storage[elem]);
+						elem++;
+						v2.setVectorY(storage[elem]);
+						elem++;
+						v2.setVectorZ(storage[elem]);
+						elem++;
+					}
+					else {
+						cin >> v2;
+					}
 					if (v.arePerpendicular(v2)) {
 						cout << "The vectors are perpendicular." << endl;
 					}
@@ -145,7 +281,17 @@ int main() {
 				{
 					cout << "Enter values for the X,Y,Z coordinates of the 2nd Vector: " << endl;
 					Vector v2;
-					cin >> v2;
+					if(mode == 0){
+						v2.setVectorX(storage[elem]);
+						elem++;
+						v2.setVectorY(storage[elem]);
+						elem++;
+						v2.setVectorZ(storage[elem]);
+						elem++;
+					}
+					else {
+						cin >> v2;
+					}
 					cout << "Sum: " << v + v2 << endl;
 					break;
 				}
@@ -153,7 +299,17 @@ int main() {
 				{
 					cout << "Enter values for the X,Y,Z coordinates of the 2nd Vector: " << endl;
 					Vector v2;
-					cin >> v2;
+					if(mode == 0){
+						v2.setVectorX(storage[elem]);
+						elem++;
+						v2.setVectorY(storage[elem]);
+						elem++;
+						v2.setVectorZ(storage[elem]);
+						elem++;
+					}
+					else {
+						cin >> v2;
+					}
 					cout << "Subtract: " << v - v2 << endl;
 					break;
 				}
@@ -161,7 +317,14 @@ int main() {
 				{
 					cout << "Enter a real number:" << endl;
 					double Nan;
-					cin >> Nan;
+					if(mode == 0){
+						Nan = storage[elem];
+						elem++;
+					}
+					else {
+						cin >> Nan;	
+					}
+					
 					cout << "Product with real number: " << Nan * v << endl;
 					break;
 				}
@@ -169,7 +332,17 @@ int main() {
 				{
 					cout << "Enter values for the X,Y,Z coordinates of the 2nd Vector: " << endl;
 					Vector v2;
-					cin >> v2;
+					if(mode == 0){
+						v2.setVectorX(storage[elem]);
+						elem++;
+						v2.setVectorY(storage[elem]);
+						elem++;
+						v2.setVectorZ(storage[elem]);
+						elem++;
+					}
+					else {
+						cin >> v2;
+					}
 					cout << "Dot product: " << v * v2 << endl;
 					break;
 				}
@@ -177,7 +350,17 @@ int main() {
 				{
 					cout << "Enter values for the X,Y,Z coordinates of the 2nd Vector: " << endl;
 					Vector v2;
-					cin >> v2;
+					if(mode == 0){
+						v2.setVectorX(storage[elem]);
+						elem++;
+						v2.setVectorY(storage[elem]);
+						elem++;
+						v2.setVectorZ(storage[elem]);
+						elem++;
+					}
+					else {
+						cin >> v2;
+					}
 					cout << "Cross product: " << (v^v2) << endl;
 					break;
 				}
@@ -185,10 +368,30 @@ int main() {
 				{
 					cout << "Enter values for the X,Y,Z coordinates of the 2nd Vector: " << endl;
 					Vector v2;
-					cin >> v2;
+					if(mode == 0){
+						v2.setVectorX(storage[elem]);
+						elem++;
+						v2.setVectorY(storage[elem]);
+						elem++;
+						v2.setVectorZ(storage[elem]);
+						elem++;
+					}
+					else {
+						cin >> v2;
+					}
 					cout << "Enter values for the X,Y,Z coordinates of the 3nd Vector: " << endl;
 					Vector v3;
-					cin >> v3;
+					if(mode == 0){
+						v3.setVectorX(storage[elem]);
+						elem++;
+						v3.setVectorY(storage[elem]);
+						elem++;
+						v3.setVectorZ(storage[elem]);
+						elem++;
+					}
+					else {
+						cin >> v3;
+					}
 					cout << "Mixed product: " << (v(v2, v3)) << endl;
 					break;
 				}
@@ -196,7 +399,17 @@ int main() {
 				{
 					cout << "Enter values for the X,Y,Z coordinates of the 2nd Vector: " << endl;
 					Vector v2;
-					cin >> v2;
+					if(mode == 0){
+						v2.setVectorX(storage[elem]);
+						elem++;
+						v2.setVectorY(storage[elem]);
+						elem++;
+						v2.setVectorZ(storage[elem]);
+						elem++;
+					}
+					else {
+						cin >> v2;
+					}
 
 					cout << "Projection: " << v.Projection(v, v2) << endl;
 					break;
@@ -214,6 +427,8 @@ int main() {
 					cout << "Choose another geometric object? y/n" << endl;
 					cin >> command2;
 					if (command2 == 'y') {
+						mode = 1;
+						elem = 0;
 						break;
 					}
 					else {
@@ -485,5 +700,18 @@ int main() {
 
 
 	} while (true);
+
+	inputFile.close();
 	return 0;
+}
+
+
+void printGreetings(){
+		    cout << R"(
+ ____  _____   ___   _______  _   _  ___       _______ 
+| ___ \/ _ \ \ / / | / /  _  || | | |/ _ \    / /____ |
+| |_/ / /_\ \ V /| |/ /| | | || | | / /_\ \  / /    / /
+|    /|  _  |\ / |    \| | | || | | |  _  | < <     \ \
+| |\ \| | | || | | |\  \ \_/ /\ \_/ / | | |  \ \.___/ /
+\_| \_\_| |_/\_/ \_| \_/\___/  \___/\_| |_/   \_\____/)" << '\n';
 }

@@ -1,5 +1,5 @@
 #include "Line.cpp"
-
+using namespace std;
 class Segment : public Line {
 public:
 //constructors

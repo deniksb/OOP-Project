@@ -20,6 +20,9 @@
     //operator == Point==Triangle
     friend bool operator==(const Triangle& lhs,const Point& rhs);
 
+      //operator <Point<Triangle дали лежи в триъгълника
+    friend bool operator<(const Point& lhs, const Triangle& rhs);
+
     //getters for the 3 points of the triangle
     Point getA() const{
         return point1;
