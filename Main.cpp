@@ -1330,18 +1330,143 @@ int main()
 		{
 			cout << "Enter values for the X,Y,Z coordinates of the 1st Point: " << endl;
 			Point a;
-			cin >> a;
+			if (mode == 0)
+			{
+				a.setX(storage[elem]);
+				elem++;
+				a.setY(storage[elem]);
+				elem++;
+				a.setZ(storage[elem]);
+				elem++;
+			}
+			else
+			{
+				cin >> a;
+				outputArr[outInd] = a.getX();
+				outInd++;
+				outputArr[outInd] = a.getY();
+				outInd++;
+				outputArr[outInd] = a.getZ();
+				outInd++;
+			}
 			cout << a << endl;
 			cout << "Enter values for the X,Y,Z coordinates of the 2nd Point: " << endl;
 			Point b;
-			cin >> b;
+			if (mode == 0)
+			{
+				b.setX(storage[elem]);
+				elem++;
+				b.setY(storage[elem]);
+				elem++;
+				b.setZ(storage[elem]);
+				elem++;
+			}
+			else
+			{
+				cin >> b;
+				outputArr[outInd] = b.getX();
+				outInd++;
+				outputArr[outInd] = b.getY();
+				outInd++;
+				outputArr[outInd] = b.getZ();
+				outInd++;
+			}
 			cout << b << endl;
 			cout << "Enter values for the X,Y,Z coordinates of the 3nd Point: " << endl;
 			Point c;
-			cin >> c;
+			if (mode == 0)
+			{
+				c.setX(storage[elem]);
+				elem++;
+				c.setY(storage[elem]);
+				elem++;
+				c.setZ(storage[elem]);
+				elem++;
+			}
+			else
+			{
+				cin >> c;
+				outputArr[outInd] = c.getX();
+				outInd++;
+				outputArr[outInd] = c.getY();
+				outInd++;
+				outputArr[outInd] = c.getZ();
+				outInd++;
+			}
 			cout << c << endl;
 			Triangle t(a, b, c);
 			cout << t << endl;
+			while (true)
+			{
+				cout << "Choose an operation: " << endl;
+				cout << "1-Find the type of the triangle" << endl;
+				cout << "2-Find the perimeter of the triangle" << endl;
+				cout << "3-Find the area of the triangle" << endl;
+				cout << "4-Find the medicenter of the triangle" << endl;
+				if (mode == 0)
+				{
+					command = storage[elem];
+					elem++;
+				}
+				else
+				{
+					cin >> command;
+					outputArr[outInd] = command;
+					outInd++;
+				}
+
+				switch (command)
+				{
+				case 1:
+					cout << t.findType() << endl;
+					break;
+				case 2:
+					cout << t.findPerimeter() << endl;
+					break;
+				case 3:
+				{
+					cout << t.findArea() << endl;
+				}
+				case 4:
+					cout << t.findMedicenter() << endl;
+				}
+				cout << "Choose another operation? y/n" << endl;
+				char command2;
+				cin >> command2;
+				if (command2 == 'y')
+				{
+					mode = 1;
+					elem = 0;
+					continue;
+				}
+				else
+				{
+					cout << "Choose another geometric object? y/n" << endl;
+					cin >> command2;
+					if (command2 == 'y')
+					{
+						elem = 0;
+						mode = 1;
+						break;
+					}
+					else
+					{
+						cout << "Would you like to save the last operation? y/n" << endl;
+						cin >> command2;
+						if (command2 == 'y')
+						{
+							outputFile.clear();
+							for (int i = 0; i < outInd; i++)
+							{
+								outputFile << outputArr[i] << " ";
+							}
+							outputFile.close();
+						}
+
+						exit(0);
+					}
+				}
+			}
 		}
 
 	} while (true);
