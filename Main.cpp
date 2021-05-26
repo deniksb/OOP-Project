@@ -25,7 +25,7 @@ int main() {
 	// }
 
 	//file for output
-	int outputArr[100];
+	double outputArr[100];
 	fstream outputFile("output.txt", ios::binary | ios::in | ios::out);
 	int outInd = 0;
 
