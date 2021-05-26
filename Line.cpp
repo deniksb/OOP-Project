@@ -63,13 +63,32 @@ bool Line::operator+(const Point& rhs) const{
     double equationX = ((rhs.getX() - pt.getX())/vc.getVectorX());
     double equationY = ((rhs.getY() - pt.getY())/vc.getVectorY());
     double equationZ = ((rhs.getZ() - pt.getZ())/vc.getVectorZ());
-
+    cout << equationX << endl << equationY << endl << equationZ << endl;
     if(equationX == 0 && equationY== 0 && equationZ==0){
         return true;
     }
-    else {
-        return false;
+    else if(equationX == equationY && equationY == equationZ){
+        return true;
     }
+    else if(isnan(equationX)){
+        if(equationY == equationZ){
+            return true;
+        }
+    }
+    else if(isnan(equationY)){
+        if(equationX == equationZ){
+            return true;
+        }
+    }
+        else if(isnan(equationZ)){
+        if(equationX == equationY){
+            
+            return true;
+        }
+        
+    }
+
+    return false;
 }
 
 //|| operator проверка дали две прави са успоредни

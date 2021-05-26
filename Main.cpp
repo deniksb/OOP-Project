@@ -600,7 +600,9 @@ int main() {
 					if (l + a) {
 						cout << "The point is on the line!" << endl;
 					}
-					else cout << " The point is not on the line" << endl;
+					else {
+						cout << " The point is not on the line" << endl;
+					}
 					break;
 				}
 				case 5:
