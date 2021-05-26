@@ -3,6 +3,7 @@
 #include "Vector.cpp"
 #include "Triangle.cpp"
 #include "Segment.cpp"
+#include"Help_Functions.h"
 using namespace std;
 
 void printGreetings();
@@ -70,12 +71,13 @@ int main()
 			Point a;
 			if (mode == 0)
 			{
-				a.setX(storage[elem]);
+				/*a.setX(storage[elem]);
 				elem++;
 				a.setY(storage[elem]);
 				elem++;
 				a.setZ(storage[elem]);
-				elem++;
+				elem++;*/
+				SetPointHelp(a, storage, elem);
 			}
 			else
 			{
@@ -111,12 +113,13 @@ int main()
 					Point b;
 					if (mode == 0)
 					{
-						b.setX(storage[elem]);
+						/*b.setX(storage[elem]);
 						elem++;
 						b.setY(storage[elem]);
 						elem++;
 						b.setZ(storage[elem]);
-						elem++;
+						elem++;*/
+						SetPointHelp(b, storage, elem);
 					}
 					else
 					{
@@ -202,12 +205,13 @@ int main()
 				Point a;
 				if (mode == 0)
 				{
-					a.setX(storage[elem]);
+					/*a.setX(storage[elem]);
 					elem++;
 					a.setY(storage[elem]);
 					elem++;
 					a.setZ(storage[elem]);
-					elem++;
+					elem++;*/
+					SetPointHelp(a, storage, elem);
 				}
 				else
 				{
@@ -225,12 +229,13 @@ int main()
 				Point b;
 				if (mode == 0)
 				{
-					b.setX(storage[elem]);
+					/*b.setX(storage[elem]);
 					elem++;
 					b.setY(storage[elem]);
 					elem++;
 					b.setZ(storage[elem]);
-					elem++;
+					elem++;*/
+					SetPointHelp(b, storage, elem);
 				}
 				else
 				{
@@ -254,12 +259,13 @@ int main()
 				Vector v2;
 				if (mode == 0)
 				{
-					v2.setVectorX(storage[elem]);
+					/*v2.setVectorX(storage[elem]);
 					elem++;
 					v2.setVectorY(storage[elem]);
 					elem++;
 					v2.setVectorZ(storage[elem]);
-					elem++;
+					elem++;*/
+					SetVectorHelp(v2, storage, elem);
 				}
 				else
 				{
@@ -277,7 +283,7 @@ int main()
 			}
 			while (true)
 			{
-				cout << "Choose an operation: " << endl;
+				/*cout << "Choose an operation: " << endl;
 				cout << "1-Vector length" << endl;
 				cout << "2-Vector direction" << endl;
 				cout << "3-Check null vector" << endl;
@@ -289,7 +295,8 @@ int main()
 				cout << "9-Vector dot product" << endl;
 				cout << "10-Vector cross product" << endl;
 				cout << "11-Mixed product" << endl;
-				cout << "12-Projection of vector a on b" << endl;
+				cout << "12-Projection of vector a on b" << endl;*/
+				VectorMenu();
 
 				if (mode == 0)
 				{
@@ -327,12 +334,13 @@ int main()
 					Vector v2;
 					if (mode == 0)
 					{
-						v2.setVectorX(storage[elem]);
+						/*v2.setVectorX(storage[elem]);
 						elem++;
 						v2.setVectorY(storage[elem]);
 						elem++;
 						v2.setVectorZ(storage[elem]);
-						elem++;
+						elem++;*/
+						SetVectorHelp(v2, storage, elem);
 					}
 					else
 					{
@@ -361,12 +369,13 @@ int main()
 					Vector v2;
 					if (mode == 0)
 					{
-						v2.setVectorX(storage[elem]);
+						/*v2.setVectorX(storage[elem]);
 						elem++;
 						v2.setVectorY(storage[elem]);
 						elem++;
 						v2.setVectorZ(storage[elem]);
-						elem++;
+						elem++;*/
+						SetVectorHelp(v2, storage, elem);
 					}
 					else
 					{
@@ -394,12 +403,13 @@ int main()
 					Vector v2;
 					if (mode == 0)
 					{
-						v2.setVectorX(storage[elem]);
+						/*v2.setVectorX(storage[elem]);
 						elem++;
 						v2.setVectorY(storage[elem]);
 						elem++;
 						v2.setVectorZ(storage[elem]);
-						elem++;
+						elem++;*/
+						SetVectorHelp(v2, storage, elem);
 					}
 					else
 					{
@@ -420,12 +430,13 @@ int main()
 					Vector v2;
 					if (mode == 0)
 					{
-						v2.setVectorX(storage[elem]);
+						/*v2.setVectorX(storage[elem]);
 						elem++;
 						v2.setVectorY(storage[elem]);
 						elem++;
 						v2.setVectorZ(storage[elem]);
-						elem++;
+						elem++;*/
+						SetVectorHelp(v2, storage, elem);
 					}
 					else
 					{
@@ -465,12 +476,13 @@ int main()
 					Vector v2;
 					if (mode == 0)
 					{
-						v2.setVectorX(storage[elem]);
+						/*v2.setVectorX(storage[elem]);
 						elem++;
 						v2.setVectorY(storage[elem]);
 						elem++;
 						v2.setVectorZ(storage[elem]);
-						elem++;
+						elem++;*/
+						SetVectorHelp(v2, storage, elem);
 					}
 					else
 					{
@@ -491,12 +503,13 @@ int main()
 					Vector v2;
 					if (mode == 0)
 					{
-						v2.setVectorX(storage[elem]);
+						/*v2.setVectorX(storage[elem]);
 						elem++;
 						v2.setVectorY(storage[elem]);
 						elem++;
 						v2.setVectorZ(storage[elem]);
-						elem++;
+						elem++;*/
+						SetVectorHelp(v2, storage, elem);
 					}
 					else
 					{
@@ -517,12 +530,13 @@ int main()
 					Vector v2;
 					if (mode == 0)
 					{
-						v2.setVectorX(storage[elem]);
+						/*v2.setVectorX(storage[elem]);
 						elem++;
 						v2.setVectorY(storage[elem]);
 						elem++;
 						v2.setVectorZ(storage[elem]);
-						elem++;
+						elem++;*/
+						SetVectorHelp(v2, storage, elem);
 					}
 					else
 					{
@@ -538,12 +552,13 @@ int main()
 					Vector v3;
 					if (mode == 0)
 					{
-						v3.setVectorX(storage[elem]);
+						/*v3.setVectorX(storage[elem]);
 						elem++;
 						v3.setVectorY(storage[elem]);
 						elem++;
 						v3.setVectorZ(storage[elem]);
-						elem++;
+						elem++;*/
+						SetVectorHelp(v3, storage, elem);
 					}
 					else
 					{
@@ -564,12 +579,13 @@ int main()
 					Vector v2;
 					if (mode == 0)
 					{
-						v2.setVectorX(storage[elem]);
+						/*v2.setVectorX(storage[elem]);
 						elem++;
 						v2.setVectorY(storage[elem]);
 						elem++;
 						v2.setVectorZ(storage[elem]);
-						elem++;
+						elem++;*/
+						SetVectorHelp(v2, storage, elem);
 					}
 					else
 					{
@@ -649,12 +665,13 @@ int main()
 				Point a;
 				if (mode == 0)
 				{
-					a.setX(storage[elem]);
+					/*a.setX(storage[elem]);
 					elem++;
 					a.setY(storage[elem]);
 					elem++;
 					a.setZ(storage[elem]);
-					elem++;
+					elem++;*/
+					SetPointHelp(a, storage, elem);
 				}
 				else
 				{
@@ -671,12 +688,13 @@ int main()
 				Point b;
 				if (mode == 0)
 				{
-					b.setX(storage[elem]);
+					/*b.setX(storage[elem]);
 					elem++;
 					b.setY(storage[elem]);
 					elem++;
 					b.setZ(storage[elem]);
-					elem++;
+					elem++;*/
+					SetPointHelp(b, storage, elem);
 				}
 				else
 				{
@@ -700,12 +718,13 @@ int main()
 				Point a;
 				if (mode == 0)
 				{
-					a.setX(storage[elem]);
+					/*a.setX(storage[elem]);
 					elem++;
 					a.setY(storage[elem]);
 					elem++;
 					a.setZ(storage[elem]);
-					elem++;
+					elem++;*/
+					SetPointHelp(a, storage, elem);
 				}
 				else
 				{
@@ -722,12 +741,13 @@ int main()
 				Vector b;
 				if (mode == 0)
 				{
-					b.setVectorX(storage[elem]);
+					/*b.setVectorX(storage[elem]);
 					elem++;
 					b.setVectorY(storage[elem]);
 					elem++;
 					b.setVectorZ(storage[elem]);
-					elem++;
+					elem++;*/
+					SetVectorHelp(b, storage, elem);
 				}
 				else
 				{
@@ -746,7 +766,7 @@ int main()
 			}
 			while (true)
 			{
-				cout << "Choose an operation: " << endl;
+				/*cout << "Choose an operation: " << endl;
 				cout << "1-Line direction" << endl;
 				cout << "2-Normal vector" << endl;
 				cout << "3-Angle between lines" << endl;
@@ -755,7 +775,8 @@ int main()
 				cout << "6-Do two lines coincide?" << endl;
 				cout << "7-Check for intersection of lines" << endl;
 				cout << "8-Are the lines crossed?" << endl;
-				cout << "9-Are the lines perpendicular" << endl;
+				cout << "9-Are the lines perpendicular" << endl;*/
+				LineMenu();
 
 				if (mode == 0)
 				{
@@ -783,12 +804,13 @@ int main()
 					Point a;
 					if (mode == 0)
 					{
-						a.setX(storage[elem]);
+						/*a.setX(storage[elem]);
 						elem++;
 						a.setY(storage[elem]);
 						elem++;
 						a.setZ(storage[elem]);
-						elem++;
+						elem++;*/
+						SetPointHelp(a, storage, elem);
 					}
 					else
 					{
@@ -805,12 +827,13 @@ int main()
 					Vector b;
 					if (mode == 0)
 					{
-						b.setVectorX(storage[elem]);
+						/*b.setVectorX(storage[elem]);
 						elem++;
 						b.setVectorY(storage[elem]);
 						elem++;
 						b.setVectorZ(storage[elem]);
-						elem++;
+						elem++;*/
+						SetVectorHelp(b, storage, elem);
 					}
 					else
 					{
@@ -833,12 +856,13 @@ int main()
 					Point a;
 					if (mode == 0)
 					{
-						a.setX(storage[elem]);
+						/*a.setX(storage[elem]);
 						elem++;
 						a.setY(storage[elem]);
 						elem++;
 						a.setZ(storage[elem]);
-						elem++;
+						elem++;*/
+						SetPointHelp(a, storage, elem);
 					}
 					else
 					{
@@ -867,12 +891,13 @@ int main()
 					Point a;
 					if (mode == 0)
 					{
-						a.setX(storage[elem]);
+						/*a.setX(storage[elem]);
 						elem++;
 						a.setY(storage[elem]);
 						elem++;
 						a.setZ(storage[elem]);
-						elem++;
+						elem++;*/
+						SetPointHelp(a, storage, elem);
 					}
 					else
 					{
@@ -889,12 +914,13 @@ int main()
 					Vector b;
 					if (mode == 0)
 					{
-						b.setVectorX(storage[elem]);
+						/*b.setVectorX(storage[elem]);
 						elem++;
 						b.setVectorY(storage[elem]);
 						elem++;
 						b.setVectorZ(storage[elem]);
-						elem++;
+						elem++;*/
+						SetVectorHelp(b, storage, elem);
 					}
 					else
 					{
@@ -923,12 +949,13 @@ int main()
 					Point a;
 					if (mode == 0)
 					{
-						a.setX(storage[elem]);
+						/*a.setX(storage[elem]);
 						elem++;
 						a.setY(storage[elem]);
 						elem++;
 						a.setZ(storage[elem]);
-						elem++;
+						elem++;*/
+						SetPointHelp(a, storage, elem);
 					}
 					else
 					{
@@ -945,12 +972,13 @@ int main()
 					Vector b;
 					if (mode == 0)
 					{
-						b.setVectorX(storage[elem]);
+						/*b.setVectorX(storage[elem]);
 						elem++;
 						b.setVectorY(storage[elem]);
 						elem++;
 						b.setVectorZ(storage[elem]);
-						elem++;
+						elem++;*/
+						SetVectorHelp(b, storage, elem);
 					}
 					else
 					{
@@ -978,12 +1006,13 @@ int main()
 					Point a;
 					if (mode == 0)
 					{
-						a.setX(storage[elem]);
+						/*a.setX(storage[elem]);
 						elem++;
 						a.setY(storage[elem]);
 						elem++;
 						a.setZ(storage[elem]);
-						elem++;
+						elem++;*/
+						SetPointHelp(a, storage, elem);
 					}
 					else
 					{
@@ -1000,12 +1029,13 @@ int main()
 					Vector b;
 					if (mode == 0)
 					{
-						b.setVectorX(storage[elem]);
+						/*b.setVectorX(storage[elem]);
 						elem++;
 						b.setVectorY(storage[elem]);
 						elem++;
 						b.setVectorZ(storage[elem]);
-						elem++;
+						elem++;*/
+						SetVectorHelp(b, storage, elem);
 					}
 					else
 					{
@@ -1033,12 +1063,13 @@ int main()
 					Point a;
 					if (mode == 0)
 					{
-						a.setX(storage[elem]);
+						/*a.setX(storage[elem]);
 						elem++;
 						a.setY(storage[elem]);
 						elem++;
 						a.setZ(storage[elem]);
-						elem++;
+						elem++;*/
+						SetPointHelp(a, storage, elem);
 					}
 					else
 					{
@@ -1055,12 +1086,13 @@ int main()
 					Vector b;
 					if (mode == 0)
 					{
-						b.setVectorX(storage[elem]);
+						/*b.setVectorX(storage[elem]);
 						elem++;
 						b.setVectorY(storage[elem]);
 						elem++;
 						b.setVectorZ(storage[elem]);
-						elem++;
+						elem++;*/
+						SetVectorHelp(b, storage, elem);
 					}
 					else
 					{
@@ -1088,12 +1120,13 @@ int main()
 					Point a;
 					if (mode == 0)
 					{
-						a.setX(storage[elem]);
+						/*a.setX(storage[elem]);
 						elem++;
 						a.setY(storage[elem]);
 						elem++;
 						a.setZ(storage[elem]);
-						elem++;
+						elem++;*/
+						SetPointHelp(a, storage, elem);
 					}
 					else
 					{
@@ -1110,12 +1143,13 @@ int main()
 					Vector b;
 					if (mode == 0)
 					{
-						b.setVectorX(storage[elem]);
+						/*b.setVectorX(storage[elem]);
 						elem++;
 						b.setVectorY(storage[elem]);
 						elem++;
 						b.setVectorZ(storage[elem]);
-						elem++;
+						elem++;*/
+						SetVectorHelp(b, storage, elem);
 					}
 					else
 					{
@@ -1184,12 +1218,13 @@ int main()
 			Point a;
 			if (mode == 0)
 			{
-				a.setX(storage[elem]);
+				/*a.setX(storage[elem]);
 				elem++;
 				a.setY(storage[elem]);
 				elem++;
 				a.setZ(storage[elem]);
-				elem++;
+				elem++;*/
+				SetPointHelp(a, storage, elem);
 			}
 			else
 			{
@@ -1206,12 +1241,13 @@ int main()
 			Point b;
 			if (mode == 0)
 			{
-				b.setX(storage[elem]);
+				/*b.setX(storage[elem]);
 				elem++;
 				b.setY(storage[elem]);
 				elem++;
 				b.setZ(storage[elem]);
-				elem++;
+				elem++;*/
+				SetPointHelp(b, storage, elem);
 			}
 			else
 			{
@@ -1260,12 +1296,13 @@ int main()
 					Point a;
 					if (mode == 0)
 					{
-						a.setX(storage[elem]);
+						/*a.setX(storage[elem]);
 						elem++;
 						a.setY(storage[elem]);
 						elem++;
 						a.setZ(storage[elem]);
-						elem++;
+						elem++;*/
+						SetPointHelp(a, storage, elem);
 					}
 					else
 					{
@@ -1332,12 +1369,13 @@ int main()
 			Point a;
 			if (mode == 0)
 			{
-				a.setX(storage[elem]);
+				/*a.setX(storage[elem]);
 				elem++;
 				a.setY(storage[elem]);
 				elem++;
 				a.setZ(storage[elem]);
-				elem++;
+				elem++;*/
+				SetPointHelp(a, storage, elem);
 			}
 			else
 			{
@@ -1354,12 +1392,13 @@ int main()
 			Point b;
 			if (mode == 0)
 			{
-				b.setX(storage[elem]);
+				/*b.setX(storage[elem]);
 				elem++;
 				b.setY(storage[elem]);
 				elem++;
 				b.setZ(storage[elem]);
-				elem++;
+				elem++;*/
+				SetPointHelp(b, storage, elem);
 			}
 			else
 			{
@@ -1376,12 +1415,13 @@ int main()
 			Point c;
 			if (mode == 0)
 			{
-				c.setX(storage[elem]);
+				/*c.setX(storage[elem]);
 				elem++;
 				c.setY(storage[elem]);
 				elem++;
 				c.setZ(storage[elem]);
-				elem++;
+				elem++;*/
+				SetPointHelp(c, storage, elem);
 			}
 			else
 			{
@@ -1398,11 +1438,12 @@ int main()
 			cout << t << endl;
 			while (true)
 			{
-				cout << "Choose an operation: " << endl;
+				/*cout << "Choose an operation: " << endl;
 				cout << "1-Find the type of the triangle" << endl;
 				cout << "2-Find the perimeter of the triangle" << endl;
 				cout << "3-Find the area of the triangle" << endl;
-				cout << "4-Find the medicenter of the triangle" << endl;
+				cout << "4-Find the medicenter of the triangle" << endl;*/
+				TriangleMenu();
 				if (mode == 0)
 				{
 					command = storage[elem];
