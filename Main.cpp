@@ -10,8 +10,8 @@ void printGreetings();
 
 int main() {
 
+	//file for input 
 	double storage[100];
-	
 	ifstream inputFile;
 	inputFile.open("input.txt");
 	int count = 0;
@@ -23,6 +23,12 @@ int main() {
 	// for(int i = 0; i < count;i++){
 	// 	cout << storage[i] << endl;
 	// }
+
+	//file for output
+	int outputArr[100];
+	fstream outputFile("output.txt", ios::binary | ios::in | ios::out);
+	int outInd = 0;
+
 	
 	//изброяваме елементите записани в масива с данни от файла
 	int elem = 0;
@@ -51,6 +57,8 @@ int main() {
 		}
 		else {
 			cin >> command;
+			outputArr[outInd] = command;
+			outInd++;
 		}
 		if (command == 1) {
 			
@@ -65,7 +73,13 @@ int main() {
 				elem++;
 			}
 			else {
-			cin >> a;	
+			cin >> a;
+			outputArr[outInd] = a.getX();
+			outInd++;
+			outputArr[outInd] = a.getY();
+			outInd++;	
+			outputArr[outInd] = a.getZ();
+			outInd++;		
 			}
 			
 			cout << a << endl;
@@ -78,6 +92,8 @@ int main() {
 				}
 				else {
 				cin >> command;	
+				outputArr[outInd] = command;
+				outInd++;
 				}
 				
 				if (command == 1) {
@@ -92,7 +108,14 @@ int main() {
 					elem++;
 					}
 					else {
-					cin >> b;	
+					cin >> b;
+					outputArr[outInd] = b.getX();
+					outInd++;
+					outputArr[outInd] = b.getY();
+					outInd++;	
+					outputArr[outInd] = b.getZ();
+					outInd++;	
+
 					}
 					cout << b << endl;
 					
@@ -120,6 +143,16 @@ int main() {
 							break;
 						}
 						else {
+							cout << "Would you like to save the last operation? y/n" << endl;
+							cin >> command2;
+							if(command2 == 'y'){
+								
+								for(int i = 0; i < outInd;i++){
+									outputFile<< outputArr[i] << " ";
+								}
+								outputFile.close();
+							}
+
 							exit(0);
 						}
 					}
@@ -934,6 +967,7 @@ int main() {
 	} while (true);
 
 	inputFile.close();
+	outputFile.close();
 	return 0;
 }
 
