@@ -11,7 +11,7 @@ public:
 	Vector(const Point&, const Point&);
 	Vector(double, double, double);
 	Vector(const Vector&);
-	~Vector();
+	virtual~Vector();
 	//getters
 	double getVectorX()const { return vX;}
 	double getVectorY()const { return vY; }

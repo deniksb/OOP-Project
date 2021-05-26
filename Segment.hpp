@@ -10,7 +10,7 @@ Segment(Point,Point);
 Segment(const Segment&);
 
 //destructor
-~Segment();
+virtual~Segment();
 
 Segment& operator=(const Segment&);
 

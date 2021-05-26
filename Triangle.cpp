@@ -30,6 +30,7 @@ Triangle::Triangle(Point &p1, Point &p2, Point &p3)
     }
    
 }
+Triangle::~Triangle(){}
 
 //namirame tipa na triugulnika TODO
 int Triangle::findType() const

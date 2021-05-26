@@ -5,6 +5,8 @@
     public:
     Triangle(Point&,Point&,Point&);
 
+    virtual~Triangle();
+
     //namirame tipa na triugulnika
     int findType() const;
 

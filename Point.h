@@ -9,7 +9,7 @@ public:
 	Point(double = 0, double = 0, double = 0);
 	Point(const Point&);
 	//destructor
-	~Point();
+	virtual~Point();
 	//overloading operator = 
 	Point& operator=(const Point&);
 	//overloading operator +
