@@ -18,6 +18,7 @@ double findLength() const;
 
 Point findCenter() const;
 
+
 bool operator==(const  Point& rhs) const{
     Vector ab(a,b);
     double t1 = (rhs.getX() - a.getX()) / ab.getVectorX(); 
