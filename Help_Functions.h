@@ -40,27 +40,28 @@ void TriangleMenu() {
 	std::cout << "4-Find the medicenter of the triangle" << std::endl;
 }
 
-Point SetPointHelp(Point&b, double storage[], int elem) {
 
-		b.setX(storage[elem]);
-		elem++;
-		b.setY(storage[elem]);
-		elem++;
-		b.setZ(storage[elem]);
-		elem++;
-	
-	return b;
- }
+Point GetP2Help(Point &a, double outputArr[], int outInd) {
+	std::cin >> a;
+	outputArr[outInd] = a.getX();
+	outInd++;
+	outputArr[outInd] = a.getY();
+	outInd++;
+	outputArr[outInd] = a.getZ();
+	outInd++;
 
-Vector SetVectorHelp(Vector&v,double storage[],int elem) {
+	return a;
+}
 
-	v.setVectorX(storage[elem]);
-	elem++;
-	v.setVectorY(storage[elem]);
-	elem++;
-	v.setVectorZ(storage[elem]);
-	elem++;
 
+Vector GetVhelp(Vector &v, double outputArr[], int outInd) {
+	std::cin >> v;
+	outputArr[outInd] = v.getVectorX();
+	outInd++;
+	outputArr[outInd] = v.getVectorY();
+	outInd++;
+	outputArr[outInd] = v.getVectorZ();
+	outInd++;
 	return v;
 }
 

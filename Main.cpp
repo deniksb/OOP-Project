@@ -71,23 +71,17 @@ int main()
 			Point a;
 			if (mode == 0)
 			{
-				/*a.setX(storage[elem]);
+				a.setX(storage[elem]);
 				elem++;
 				a.setY(storage[elem]);
 				elem++;
 				a.setZ(storage[elem]);
-				elem++;*/
-				SetPointHelp(a, storage, elem);
+				elem++;
 			}
 			else
 			{
-				cin >> a;
-				outputArr[outInd] = a.getX();
-				outInd++;
-				outputArr[outInd] = a.getY();
-				outInd++;
-				outputArr[outInd] = a.getZ();
-				outInd++;
+				
+				GetP2Help(a, outputArr, outInd);
 			}
 
 			cout << a << endl;
@@ -113,23 +107,17 @@ int main()
 					Point b;
 					if (mode == 0)
 					{
-						/*b.setX(storage[elem]);
+						b.setX(storage[elem]);
 						elem++;
 						b.setY(storage[elem]);
 						elem++;
 						b.setZ(storage[elem]);
-						elem++;*/
-						SetPointHelp(b, storage, elem);
+						elem++;
 					}
 					else
 					{
-						cin >> b;
-						outputArr[outInd] = b.getX();
-						outInd++;
-						outputArr[outInd] = b.getY();
-						outInd++;
-						outputArr[outInd] = b.getZ();
-						outInd++;
+					
+						GetP2Help(b, outputArr, outInd);
 					}
 					cout << b << endl;
 
@@ -205,23 +193,17 @@ int main()
 				Point a;
 				if (mode == 0)
 				{
-					/*a.setX(storage[elem]);
+					a.setX(storage[elem]);
 					elem++;
 					a.setY(storage[elem]);
 					elem++;
 					a.setZ(storage[elem]);
-					elem++;*/
-					SetPointHelp(a, storage, elem);
+					elem++;
 				}
 				else
 				{
-					cin >> a;
-					outputArr[outInd] = a.getX();
-					outInd++;
-					outputArr[outInd] = a.getY();
-					outInd++;
-					outputArr[outInd] = a.getZ();
-					outInd++;
+					
+					GetP2Help(a, outputArr, outInd);
 				}
 
 				cout << a << endl;
@@ -229,23 +211,17 @@ int main()
 				Point b;
 				if (mode == 0)
 				{
-					/*b.setX(storage[elem]);
+					b.setX(storage[elem]);
 					elem++;
 					b.setY(storage[elem]);
 					elem++;
 					b.setZ(storage[elem]);
-					elem++;*/
-					SetPointHelp(b, storage, elem);
+					elem++;
 				}
 				else
 				{
-					cin >> b;
-					outputArr[outInd] = b.getX();
-					outInd++;
-					outputArr[outInd] = b.getY();
-					outInd++;
-					outputArr[outInd] = b.getZ();
-					outInd++;
+					
+					GetP2Help(b, outputArr, outInd);
 				}
 
 				cout << b << endl;
@@ -259,23 +235,17 @@ int main()
 				Vector v2;
 				if (mode == 0)
 				{
-					/*v2.setVectorX(storage[elem]);
+					v2.setVectorX(storage[elem]);
 					elem++;
 					v2.setVectorY(storage[elem]);
 					elem++;
 					v2.setVectorZ(storage[elem]);
-					elem++;*/
-					SetVectorHelp(v2, storage, elem);
+					elem++;
 				}
 				else
 				{
-					cin >> v2;
-					outputArr[outInd] = v2.getVectorX();
-					outInd++;
-					outputArr[outInd] = v2.getVectorY();
-					outInd++;
-					outputArr[outInd] = v2.getVectorZ();
-					outInd++;
+					
+					GetVhelp(v2, outputArr, outInd);
 				}
 
 				v = v2;
@@ -283,19 +253,7 @@ int main()
 			}
 			while (true)
 			{
-				/*cout << "Choose an operation: " << endl;
-				cout << "1-Vector length" << endl;
-				cout << "2-Vector direction" << endl;
-				cout << "3-Check null vector" << endl;
-				cout << "4-Check parallel" << endl;
-				cout << "5-Check perpendicular" << endl;
-				cout << "6-Vector sum" << endl;
-				cout << "7-Vector subtract" << endl;
-				cout << "8-Vector product with real number" << endl;
-				cout << "9-Vector dot product" << endl;
-				cout << "10-Vector cross product" << endl;
-				cout << "11-Mixed product" << endl;
-				cout << "12-Projection of vector a on b" << endl;*/
+				
 				VectorMenu();
 
 				if (mode == 0)
@@ -334,23 +292,17 @@ int main()
 					Vector v2;
 					if (mode == 0)
 					{
-						/*v2.setVectorX(storage[elem]);
+						v2.setVectorX(storage[elem]);
 						elem++;
 						v2.setVectorY(storage[elem]);
 						elem++;
 						v2.setVectorZ(storage[elem]);
-						elem++;*/
-						SetVectorHelp(v2, storage, elem);
+						elem++;
 					}
 					else
 					{
-						cin >> v2;
-						outputArr[outInd] = v2.getVectorX();
-						outInd++;
-						outputArr[outInd] = v2.getVectorY();
-						outInd++;
-						outputArr[outInd] = v2.getVectorZ();
-						outInd++;
+						
+						GetVhelp(v2, outputArr, outInd);
 					}
 					if (v.arePararell(v2))
 					{
@@ -369,23 +321,17 @@ int main()
 					Vector v2;
 					if (mode == 0)
 					{
-						/*v2.setVectorX(storage[elem]);
+						v2.setVectorX(storage[elem]);
 						elem++;
 						v2.setVectorY(storage[elem]);
 						elem++;
 						v2.setVectorZ(storage[elem]);
-						elem++;*/
-						SetVectorHelp(v2, storage, elem);
+						elem++;
 					}
 					else
 					{
-						cin >> v2;
-						outputArr[outInd] = v2.getVectorX();
-						outInd++;
-						outputArr[outInd] = v2.getVectorY();
-						outInd++;
-						outputArr[outInd] = v2.getVectorZ();
-						outInd++;
+						
+						GetVhelp(v2, outputArr, outInd);
 					}
 					if (v.arePerpendicular(v2))
 					{
@@ -403,23 +349,17 @@ int main()
 					Vector v2;
 					if (mode == 0)
 					{
-						/*v2.setVectorX(storage[elem]);
+						v2.setVectorX(storage[elem]);
 						elem++;
 						v2.setVectorY(storage[elem]);
 						elem++;
 						v2.setVectorZ(storage[elem]);
-						elem++;*/
-						SetVectorHelp(v2, storage, elem);
+						elem++;
 					}
 					else
 					{
-						cin >> v2;
-						outputArr[outInd] = v2.getVectorX();
-						outInd++;
-						outputArr[outInd] = v2.getVectorY();
-						outInd++;
-						outputArr[outInd] = v2.getVectorZ();
-						outInd++;
+						
+						GetVhelp(v2, outputArr, outInd);
 					}
 					cout << "Sum: " << v + v2 << endl;
 					break;
@@ -430,23 +370,17 @@ int main()
 					Vector v2;
 					if (mode == 0)
 					{
-						/*v2.setVectorX(storage[elem]);
+						v2.setVectorX(storage[elem]);
 						elem++;
 						v2.setVectorY(storage[elem]);
 						elem++;
 						v2.setVectorZ(storage[elem]);
-						elem++;*/
-						SetVectorHelp(v2, storage, elem);
+						elem++;
 					}
 					else
 					{
-						cin >> v2;
-						outputArr[outInd] = v2.getVectorX();
-						outInd++;
-						outputArr[outInd] = v2.getVectorY();
-						outInd++;
-						outputArr[outInd] = v2.getVectorZ();
-						outInd++;
+						
+						GetVhelp(v2, outputArr, outInd);
 					}
 					cout << "Subtract: " << v - v2 << endl;
 					break;
@@ -476,23 +410,17 @@ int main()
 					Vector v2;
 					if (mode == 0)
 					{
-						/*v2.setVectorX(storage[elem]);
+						v2.setVectorX(storage[elem]);
 						elem++;
 						v2.setVectorY(storage[elem]);
 						elem++;
 						v2.setVectorZ(storage[elem]);
-						elem++;*/
-						SetVectorHelp(v2, storage, elem);
+						elem++;
 					}
 					else
 					{
-						cin >> v2;
-						outputArr[outInd] = v2.getVectorX();
-						outInd++;
-						outputArr[outInd] = v2.getVectorY();
-						outInd++;
-						outputArr[outInd] = v2.getVectorZ();
-						outInd++;
+						
+						GetVhelp(v2, outputArr, outInd);
 					}
 					cout << "Dot product: " << v * v2 << endl;
 					break;
@@ -503,23 +431,17 @@ int main()
 					Vector v2;
 					if (mode == 0)
 					{
-						/*v2.setVectorX(storage[elem]);
+						v2.setVectorX(storage[elem]);
 						elem++;
 						v2.setVectorY(storage[elem]);
 						elem++;
 						v2.setVectorZ(storage[elem]);
-						elem++;*/
-						SetVectorHelp(v2, storage, elem);
+						elem++;
 					}
 					else
 					{
-						cin >> v2;
-						outputArr[outInd] = v2.getVectorX();
-						outInd++;
-						outputArr[outInd] = v2.getVectorY();
-						outInd++;
-						outputArr[outInd] = v2.getVectorZ();
-						outInd++;
+						
+						GetVhelp(v2, outputArr, outInd);
 					}
 					cout << "Cross product: " << (v ^ v2) << endl;
 					break;
@@ -530,45 +452,33 @@ int main()
 					Vector v2;
 					if (mode == 0)
 					{
-						/*v2.setVectorX(storage[elem]);
+						v2.setVectorX(storage[elem]);
 						elem++;
 						v2.setVectorY(storage[elem]);
 						elem++;
 						v2.setVectorZ(storage[elem]);
-						elem++;*/
-						SetVectorHelp(v2, storage, elem);
+						elem++;
 					}
 					else
 					{
-						cin >> v2;
-						outputArr[outInd] = v2.getVectorX();
-						outInd++;
-						outputArr[outInd] = v2.getVectorY();
-						outInd++;
-						outputArr[outInd] = v2.getVectorZ();
-						outInd++;
+						
+						GetVhelp(v2, outputArr, outInd);
 					}
 					cout << "Enter values for the X,Y,Z coordinates of the 3nd Vector: " << endl;
 					Vector v3;
 					if (mode == 0)
 					{
-						/*v3.setVectorX(storage[elem]);
+						v3.setVectorX(storage[elem]);
 						elem++;
 						v3.setVectorY(storage[elem]);
 						elem++;
 						v3.setVectorZ(storage[elem]);
-						elem++;*/
-						SetVectorHelp(v3, storage, elem);
+						elem++;
 					}
 					else
 					{
-						cin >> v3;
-						outputArr[outInd] = v3.getVectorX();
-						outInd++;
-						outputArr[outInd] = v3.getVectorY();
-						outInd++;
-						outputArr[outInd] = v3.getVectorZ();
-						outInd++;
+						
+						GetVhelp(v3, outputArr, outInd);
 					}
 					cout << "Mixed product: " << (v(v2, v3)) << endl;
 					break;
@@ -579,23 +489,17 @@ int main()
 					Vector v2;
 					if (mode == 0)
 					{
-						/*v2.setVectorX(storage[elem]);
+						v2.setVectorX(storage[elem]);
 						elem++;
 						v2.setVectorY(storage[elem]);
 						elem++;
 						v2.setVectorZ(storage[elem]);
-						elem++;*/
-						SetVectorHelp(v2, storage, elem);
+						elem++;
 					}
 					else
 					{
-						cin >> v2;
-						outputArr[outInd] = v2.getVectorX();
-						outInd++;
-						outputArr[outInd] = v2.getVectorY();
-						outInd++;
-						outputArr[outInd] = v2.getVectorZ();
-						outInd++;
+						
+						GetVhelp(v2, outputArr, outInd);
 					}
 
 					cout << "Projection: " << v.Projection(v, v2) << endl;
@@ -665,46 +569,34 @@ int main()
 				Point a;
 				if (mode == 0)
 				{
-					/*a.setX(storage[elem]);
+					a.setX(storage[elem]);
 					elem++;
 					a.setY(storage[elem]);
 					elem++;
 					a.setZ(storage[elem]);
-					elem++;*/
-					SetPointHelp(a, storage, elem);
+					elem++;
 				}
 				else
 				{
-					cin >> a;
-					outputArr[outInd] = a.getX();
-					outInd++;
-					outputArr[outInd] = a.getY();
-					outInd++;
-					outputArr[outInd] = a.getZ();
-					outInd++;
+					
+					GetP2Help(a, outputArr, outInd);
 				}
 				cout << a << endl;
 				cout << "Enter values for the X,Y,Z coordinates of the 2nd Point: " << endl;
 				Point b;
 				if (mode == 0)
 				{
-					/*b.setX(storage[elem]);
+					b.setX(storage[elem]);
 					elem++;
 					b.setY(storage[elem]);
 					elem++;
 					b.setZ(storage[elem]);
-					elem++;*/
-					SetPointHelp(b, storage, elem);
+					elem++;
 				}
 				else
 				{
-					cin >> b;
-					outputArr[outInd] = b.getX();
-					outInd++;
-					outputArr[outInd] = b.getY();
-					outInd++;
-					outputArr[outInd] = b.getZ();
-					outInd++;
+					
+					GetP2Help(b, outputArr, outInd);
 				}
 				cout << b << endl;
 
@@ -718,46 +610,34 @@ int main()
 				Point a;
 				if (mode == 0)
 				{
-					/*a.setX(storage[elem]);
+					a.setX(storage[elem]);
 					elem++;
 					a.setY(storage[elem]);
 					elem++;
 					a.setZ(storage[elem]);
-					elem++;*/
-					SetPointHelp(a, storage, elem);
+					elem++;
 				}
 				else
 				{
-					cin >> a;
-					outputArr[outInd] = a.getX();
-					outInd++;
-					outputArr[outInd] = a.getY();
-					outInd++;
-					outputArr[outInd] = a.getZ();
-					outInd++;
+					
+					GetP2Help(a, outputArr, outInd);
 				}
 				cout << a << endl;
 				cout << "Enter values for the X,Y,Z coordinates of the Vector: " << endl;
 				Vector b;
 				if (mode == 0)
 				{
-					/*b.setVectorX(storage[elem]);
+					b.setVectorX(storage[elem]);
 					elem++;
 					b.setVectorY(storage[elem]);
 					elem++;
 					b.setVectorZ(storage[elem]);
-					elem++;*/
-					SetVectorHelp(b, storage, elem);
+					elem++;
 				}
 				else
 				{
-					cin >> b;
-					outputArr[outInd] = b.getX();
-					outInd++;
-					outputArr[outInd] = b.getY();
-					outInd++;
-					outputArr[outInd] = b.getZ();
-					outInd++;
+					
+					GetVhelp(b, outputArr, outInd);
 				}
 				cout << b << endl;
 				Line l2(a, b);
@@ -766,16 +646,7 @@ int main()
 			}
 			while (true)
 			{
-				/*cout << "Choose an operation: " << endl;
-				cout << "1-Line direction" << endl;
-				cout << "2-Normal vector" << endl;
-				cout << "3-Angle between lines" << endl;
-				cout << "4-Point on line check" << endl;
-				cout << "5-Are lines parallel?" << endl;
-				cout << "6-Do two lines coincide?" << endl;
-				cout << "7-Check for intersection of lines" << endl;
-				cout << "8-Are the lines crossed?" << endl;
-				cout << "9-Are the lines perpendicular" << endl;*/
+				
 				LineMenu();
 
 				if (mode == 0)
@@ -804,46 +675,34 @@ int main()
 					Point a;
 					if (mode == 0)
 					{
-						/*a.setX(storage[elem]);
+						a.setX(storage[elem]);
 						elem++;
 						a.setY(storage[elem]);
 						elem++;
 						a.setZ(storage[elem]);
-						elem++;*/
-						SetPointHelp(a, storage, elem);
+						elem++;
 					}
 					else
 					{
-						cin >> a;
-						outputArr[outInd] = a.getX();
-						outInd++;
-						outputArr[outInd] = a.getY();
-						outInd++;
-						outputArr[outInd] = a.getZ();
-						outInd++;
+						
+						GetP2Help(a, outputArr, outInd);
 					}
 					cout << a << endl;
 					cout << "Enter values for the X,Y,Z coordinates of the Vector: " << endl;
 					Vector b;
 					if (mode == 0)
 					{
-						/*b.setVectorX(storage[elem]);
+						b.setVectorX(storage[elem]);
 						elem++;
 						b.setVectorY(storage[elem]);
 						elem++;
 						b.setVectorZ(storage[elem]);
-						elem++;*/
-						SetVectorHelp(b, storage, elem);
+						elem++;
 					}
 					else
 					{
-						cin >> b;
-						outputArr[outInd] = b.getVectorX();
-						outInd++;
-						outputArr[outInd] = b.getVectorY();
-						outInd++;
-						outputArr[outInd] = b.getVectorZ();
-						outInd++;
+						
+						GetVhelp(b, outputArr, outInd);
 					}
 					cout << b << endl;
 					Line l2(a, b);
@@ -856,13 +715,12 @@ int main()
 					Point a;
 					if (mode == 0)
 					{
-						/*a.setX(storage[elem]);
+						a.setX(storage[elem]);
 						elem++;
 						a.setY(storage[elem]);
 						elem++;
 						a.setZ(storage[elem]);
-						elem++;*/
-						SetPointHelp(a, storage, elem);
+						elem++;
 					}
 					else
 					{
@@ -891,46 +749,34 @@ int main()
 					Point a;
 					if (mode == 0)
 					{
-						/*a.setX(storage[elem]);
+						a.setX(storage[elem]);
 						elem++;
 						a.setY(storage[elem]);
 						elem++;
 						a.setZ(storage[elem]);
-						elem++;*/
-						SetPointHelp(a, storage, elem);
+						elem++;
 					}
 					else
 					{
-						cin >> a;
-						outputArr[outInd] = a.getX();
-						outInd++;
-						outputArr[outInd] = a.getY();
-						outInd++;
-						outputArr[outInd] = a.getZ();
-						outInd++;
+						
+						GetP2Help(a, outputArr, outInd);
 					}
 					cout << a << endl;
 					cout << "Enter values for the X,Y,Z coordinates of the Vector: " << endl;
 					Vector b;
 					if (mode == 0)
 					{
-						/*b.setVectorX(storage[elem]);
+						b.setVectorX(storage[elem]);
 						elem++;
 						b.setVectorY(storage[elem]);
 						elem++;
 						b.setVectorZ(storage[elem]);
-						elem++;*/
-						SetVectorHelp(b, storage, elem);
+						elem++;
 					}
 					else
 					{
-						cin >> b;
-						outputArr[outInd] = b.getVectorX();
-						outInd++;
-						outputArr[outInd] = b.getVectorY();
-						outInd++;
-						outputArr[outInd] = b.getVectorZ();
-						outInd++;
+						
+						GetVhelp(b, outputArr, outInd);
 					}
 					cout << b << endl;
 					Line l2(a, b);
@@ -949,46 +795,34 @@ int main()
 					Point a;
 					if (mode == 0)
 					{
-						/*a.setX(storage[elem]);
+						a.setX(storage[elem]);
 						elem++;
 						a.setY(storage[elem]);
 						elem++;
 						a.setZ(storage[elem]);
-						elem++;*/
-						SetPointHelp(a, storage, elem);
+						elem++;
 					}
 					else
 					{
-						cin >> a;
-						outputArr[outInd] = a.getX();
-						outInd++;
-						outputArr[outInd] = a.getY();
-						outInd++;
-						outputArr[outInd] = a.getZ();
-						outInd++;
+						
+						GetP2Help(a, outputArr, outInd);
 					}
 					cout << a << endl;
 					cout << "Enter values for the X,Y,Z coordinates of the Vector: " << endl;
 					Vector b;
 					if (mode == 0)
 					{
-						/*b.setVectorX(storage[elem]);
+						b.setVectorX(storage[elem]);
 						elem++;
 						b.setVectorY(storage[elem]);
 						elem++;
 						b.setVectorZ(storage[elem]);
-						elem++;*/
-						SetVectorHelp(b, storage, elem);
+						elem++;
 					}
 					else
 					{
-						cin >> b;
-						outputArr[outInd] = b.getVectorX();
-						outInd++;
-						outputArr[outInd] = b.getVectorY();
-						outInd++;
-						outputArr[outInd] = b.getVectorZ();
-						outInd++;
+						
+						GetVhelp(b, outputArr, outInd);
 					}
 					cout << b << endl;
 					Line l2(a, b);
@@ -1006,46 +840,33 @@ int main()
 					Point a;
 					if (mode == 0)
 					{
-						/*a.setX(storage[elem]);
+						a.setX(storage[elem]);
 						elem++;
 						a.setY(storage[elem]);
 						elem++;
 						a.setZ(storage[elem]);
-						elem++;*/
-						SetPointHelp(a, storage, elem);
+						elem++;
 					}
 					else
 					{
-						cin >> a;
-						outputArr[outInd] = a.getX();
-						outInd++;
-						outputArr[outInd] = a.getY();
-						outInd++;
-						outputArr[outInd] = a.getZ();
-						outInd++;
+						
 					}
 					cout << a << endl;
 					cout << "Enter values for the X,Y,Z coordinates of the Vector: " << endl;
 					Vector b;
 					if (mode == 0)
 					{
-						/*b.setVectorX(storage[elem]);
+						b.setVectorX(storage[elem]);
 						elem++;
 						b.setVectorY(storage[elem]);
 						elem++;
 						b.setVectorZ(storage[elem]);
-						elem++;*/
-						SetVectorHelp(b, storage, elem);
+						elem++;
 					}
 					else
 					{
-						cin >> b;
-						outputArr[outInd] = b.getVectorX();
-						outInd++;
-						outputArr[outInd] = b.getVectorY();
-						outInd++;
-						outputArr[outInd] = b.getVectorZ();
-						outInd++;
+						
+						GetVhelp(b, outputArr, outInd);
 					}
 					cout << b << endl;
 					Line l2(a, b);
@@ -1063,46 +884,34 @@ int main()
 					Point a;
 					if (mode == 0)
 					{
-						/*a.setX(storage[elem]);
+						a.setX(storage[elem]);
 						elem++;
 						a.setY(storage[elem]);
 						elem++;
 						a.setZ(storage[elem]);
-						elem++;*/
-						SetPointHelp(a, storage, elem);
+						elem++;
 					}
 					else
 					{
-						cin >> a;
-						outputArr[outInd] = a.getX();
-						outInd++;
-						outputArr[outInd] = a.getY();
-						outInd++;
-						outputArr[outInd] = a.getZ();
-						outInd++;
+						
+						GetP2Help(a, outputArr, outInd);
 					}
 					cout << a << endl;
 					cout << "Enter values for the X,Y,Z coordinates of the Vector: " << endl;
 					Vector b;
 					if (mode == 0)
 					{
-						/*b.setVectorX(storage[elem]);
+						b.setVectorX(storage[elem]);
 						elem++;
 						b.setVectorY(storage[elem]);
 						elem++;
 						b.setVectorZ(storage[elem]);
-						elem++;*/
-						SetVectorHelp(b, storage, elem);
+						elem++;
 					}
 					else
 					{
-						cin >> b;
-						outputArr[outInd] = b.getVectorX();
-						outInd++;
-						outputArr[outInd] = b.getVectorY();
-						outInd++;
-						outputArr[outInd] = b.getVectorZ();
-						outInd++;
+						
+						GetVhelp(b, outputArr, outInd);
 					}
 					cout << b << endl;
 					Line l2(a, b);
@@ -1120,46 +929,34 @@ int main()
 					Point a;
 					if (mode == 0)
 					{
-						/*a.setX(storage[elem]);
+						a.setX(storage[elem]);
 						elem++;
 						a.setY(storage[elem]);
 						elem++;
 						a.setZ(storage[elem]);
-						elem++;*/
-						SetPointHelp(a, storage, elem);
+						elem++;
 					}
 					else
 					{
-						cin >> a;
-						outputArr[outInd] = a.getX();
-						outInd++;
-						outputArr[outInd] = a.getY();
-						outInd++;
-						outputArr[outInd] = a.getZ();
-						outInd++;
+						
+						GetP2Help(a, outputArr, outInd);
 					}
 					cout << a << endl;
 					cout << "Enter values for the X,Y,Z coordinates of the Vector: " << endl;
 					Vector b;
 					if (mode == 0)
 					{
-						/*b.setVectorX(storage[elem]);
+						b.setVectorX(storage[elem]);
 						elem++;
 						b.setVectorY(storage[elem]);
 						elem++;
 						b.setVectorZ(storage[elem]);
-						elem++;*/
-						SetVectorHelp(b, storage, elem);
+						elem++;
 					}
 					else
 					{
-						cin >> b;
-						outputArr[outInd] = b.getVectorX();
-						outInd++;
-						outputArr[outInd] = b.getVectorY();
-						outInd++;
-						outputArr[outInd] = b.getVectorZ();
-						outInd++;
+						
+						GetVhelp(b, outputArr, outInd);
 					}
 					cout << b << endl;
 					Line l2(a, b);
@@ -1218,46 +1015,34 @@ int main()
 			Point a;
 			if (mode == 0)
 			{
-				/*a.setX(storage[elem]);
+				a.setX(storage[elem]);
 				elem++;
 				a.setY(storage[elem]);
 				elem++;
 				a.setZ(storage[elem]);
-				elem++;*/
-				SetPointHelp(a, storage, elem);
+				elem++;
 			}
 			else
 			{
-				cin >> a;
-				outputArr[outInd] = a.getX();
-				outInd++;
-				outputArr[outInd] = a.getY();
-				outInd++;
-				outputArr[outInd] = a.getZ();
-				outInd++;
+			
+				GetP2Help(a, outputArr, outInd);
 			}
 			cout << a << endl;
 			cout << "Enter values for the X,Y,Z coordinates of the 2nd Point: " << endl;
 			Point b;
 			if (mode == 0)
 			{
-				/*b.setX(storage[elem]);
+				b.setX(storage[elem]);
 				elem++;
 				b.setY(storage[elem]);
 				elem++;
 				b.setZ(storage[elem]);
-				elem++;*/
-				SetPointHelp(b, storage, elem);
+				elem++;
 			}
 			else
 			{
-				cin >> b;
-				outputArr[outInd] = b.getX();
-				outInd++;
-				outputArr[outInd] = b.getY();
-				outInd++;
-				outputArr[outInd] = b.getZ();
-				outInd++;
+				
+				GetP2Help(b, outputArr, outInd);
 			}
 			cout << b << endl;
 			Segment s2(a, b);
@@ -1296,23 +1081,17 @@ int main()
 					Point a;
 					if (mode == 0)
 					{
-						/*a.setX(storage[elem]);
+						a.setX(storage[elem]);
 						elem++;
 						a.setY(storage[elem]);
 						elem++;
 						a.setZ(storage[elem]);
-						elem++;*/
-						SetPointHelp(a, storage, elem);
+						elem++;
 					}
 					else
 					{
-						cin >> a;
-						outputArr[outInd] = a.getX();
-						outInd++;
-						outputArr[outInd] = a.getY();
-						outInd++;
-						outputArr[outInd] = a.getZ();
-						outInd++;
+						
+						GetP2Help(a, outputArr, outInd);
 					}
 					cout << a << endl;
 					if (s == a)
@@ -1369,80 +1148,57 @@ int main()
 			Point a;
 			if (mode == 0)
 			{
-				/*a.setX(storage[elem]);
+				a.setX(storage[elem]);
 				elem++;
 				a.setY(storage[elem]);
 				elem++;
 				a.setZ(storage[elem]);
-				elem++;*/
-				SetPointHelp(a, storage, elem);
+				elem++;
 			}
 			else
 			{
-				cin >> a;
-				outputArr[outInd] = a.getX();
-				outInd++;
-				outputArr[outInd] = a.getY();
-				outInd++;
-				outputArr[outInd] = a.getZ();
-				outInd++;
+				
+				GetP2Help(a, outputArr, outInd);
 			}
 			cout << a << endl;
 			cout << "Enter values for the X,Y,Z coordinates of the 2nd Point: " << endl;
 			Point b;
 			if (mode == 0)
 			{
-				/*b.setX(storage[elem]);
+				b.setX(storage[elem]);
 				elem++;
 				b.setY(storage[elem]);
 				elem++;
 				b.setZ(storage[elem]);
-				elem++;*/
-				SetPointHelp(b, storage, elem);
+				elem++;
 			}
 			else
 			{
-				cin >> b;
-				outputArr[outInd] = b.getX();
-				outInd++;
-				outputArr[outInd] = b.getY();
-				outInd++;
-				outputArr[outInd] = b.getZ();
-				outInd++;
+				GetP2Help(b, outputArr, outInd);
 			}
 			cout << b << endl;
 			cout << "Enter values for the X,Y,Z coordinates of the 3nd Point: " << endl;
 			Point c;
 			if (mode == 0)
 			{
-				/*c.setX(storage[elem]);
+				c.setX(storage[elem]);
 				elem++;
 				c.setY(storage[elem]);
 				elem++;
 				c.setZ(storage[elem]);
-				elem++;*/
-				SetPointHelp(c, storage, elem);
+				elem++;
 			}
 			else
 			{
-				cin >> c;
-				outputArr[outInd] = c.getX();
-				outInd++;
-				outputArr[outInd] = c.getY();
-				outInd++;
-				outputArr[outInd] = c.getZ();
-				outInd++;
+				
+				GetP2Help(c, outputArr, outInd);
 			}
 			cout << c << endl;
 			Triangle t(a, b, c);
 			cout << t << endl;
 			while (true)
 			{
-				/*cout << "Choose an operation: " << endl;
-				cout << "1-Find the type of the triangle" << endl;
-				cout << "2-Find the perimeter of the triangle" << endl;
-				cout << "3-Find the area of the triangle" << endl;
-				cout << "4-Find the medicenter of the triangle" << endl;*/
+				
 				TriangleMenu();
 				if (mode == 0)
 				{
