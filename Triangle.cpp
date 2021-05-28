@@ -3,7 +3,14 @@
 #include "EqualPointException.hpp"
 using namespace std;
 
-Triangle::Triangle(Point &p1, Point &p2, Point &p3)
+Triangle::Triangle():Point(0,0,0)
+{
+	point1 = Point(0, 0, 0);
+	point2 = Point(0, 0, 0);
+	point3 = Point(0, 0, 0);
+}
+
+Triangle::Triangle(const Point &p1,const Point &p2,const Point &p3)
 {
     try{
          if (p1 == p2)
@@ -30,7 +37,21 @@ Triangle::Triangle(Point &p1, Point &p2, Point &p3)
     }
    
 }
+
+Triangle::Triangle(const Triangle & rhs) :Point(rhs), point1(rhs.point1), point2(rhs.point2), point3(rhs.point3) {}
+
 Triangle::~Triangle(){}
+
+Triangle & Triangle::operator=(const Triangle & rhs)
+{
+	if (this != &rhs) {
+		Point::operator=(rhs);
+		point1 = rhs.point1;
+		point2 = rhs.point2;
+		point3 = rhs.point3;
+	}
+	return *this;
+}
 
 //namirame tipa na triugulnika TODO
 int Triangle::findType() const

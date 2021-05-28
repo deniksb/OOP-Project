@@ -40,6 +40,23 @@ void TriangleMenu() {
 	std::cout << "4-Find the medicenter of the triangle" << std::endl;
 }
 
+void TetrahedronMenu() {
+	std::cout << "Choose an operation: " << std::endl;
+	std::cout << "1-Check if the tetrahedron is regular: " << std::endl;
+	std::cout << "2-Check if the tetrahedron is orthogonal: " << std::endl;
+	std::cout << "3-Find the surface area of the tetrahedron: " << std::endl;
+	std::cout << "4-Find the volume of the tetrahedron: " << std::endl;
+}
+
+void MainMenu() {
+	std::cout << "Choose a geometric object: " << std::endl;
+	std::cout << "1-Point" << std::endl;
+	std::cout << "2-Vector" << std::endl;
+	std::cout << "3-Line" << std::endl;
+	std::cout << "4-Segment" << std::endl;
+	std::cout << "5-Triangle" << std::endl;
+	std::cout << "6-Tetrahedron" << std::endl;
+}
 
 Point GetP2Help(Point &a, double outputArr[], int outInd) {
 	std::cin >> a;

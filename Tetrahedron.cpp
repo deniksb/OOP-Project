@@ -85,11 +85,12 @@ double Tetrahedron::SurfaceArea() const
 {
 	Vector AB(A, B);
 	if (IsRegular()) {
-		return sqrt(3 * pow(AB.lenghtOfV(), 2));
+		return sqrt(3)*pow(AB.lenghtOfV(), 2);
 	}
-	else cout << "Tetrahedron is not regular" << endl;
-	return 0.0;
-
+	else {
+		Triangle ABD(A, B, D), ABC(A, B, C), BCD(B, C, D), ACD(A, C, D);
+		return ABD.findArea() + ABC.findArea() + BCD.findArea() + ACD.findArea();
+	}
 }
 
 double Tetrahedron::Volume() const

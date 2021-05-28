@@ -3,9 +3,12 @@
 
  class Triangle : public Point {
     public:
-    Triangle(Point&,Point&,Point&);
-
+    //big 5 rule
+    Triangle();
+    Triangle(const Point&,const Point&,const Point&);
+    Triangle(const Triangle &);
     virtual~Triangle();
+    Triangle& operator=(const Triangle &);
 
     //namirame tipa na triugulnika
     int findType() const;
