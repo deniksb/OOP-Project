@@ -11,7 +11,7 @@ void printGreetings();
 
 int main()
 {
-	//penis
+	
 	//file for input
 	double storage[100];
 	ifstream inputFile;
