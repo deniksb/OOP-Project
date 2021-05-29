@@ -70,7 +70,6 @@ Point GetP2Help(Point &a, double outputArr[], int & outInd) {
 	return a;
 }
 
-
 Vector GetVhelp(Vector &v, double outputArr[], int & outInd) {
 	std::cin >> v;
 	outputArr[outInd] = v.getVectorX();
@@ -82,5 +81,24 @@ Vector GetVhelp(Vector &v, double outputArr[], int & outInd) {
 	return v;
 }
 
+Point SetPointHelp(Point &a, double storage[], int & elem) {
+	a.setX(storage[elem]);
+	elem++;
+	a.setY(storage[elem]);
+	elem++;
+	a.setZ(storage[elem]);
+	elem++;
+	return a;
+}
+
+Vector SetVectorHelp(Vector& v, double storage[], int&elem) {
+	v.setVectorX(storage[elem]);
+	elem++;
+	v.setVectorY(storage[elem]);
+	elem++;
+	v.setVectorZ(storage[elem]);
+	elem++;
+	return v;
+}
 
 #endif
