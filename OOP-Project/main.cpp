@@ -1,17 +1,21 @@
 #include <iostream>
-#include <fstream>
+#include "Triangle.h"
 #include "Vector.h"
-#include "Triangle.hpp"
+#include "Segment.h"
 #include"Tetrahedron.h"
-#include "Segment.hpp"
+#include"Point.h"
 #include"Help_Functions.h"
+#include"EqualPointException.h"
+#include"VectorLengthException.h"
+#include<fstream>
+
 using namespace std;
 
 void printGreetings();
 
 int main()
 {
-	
+
 	//file for input
 	double storage[100];
 	ifstream inputFile;
@@ -33,7 +37,7 @@ int main()
 
 	int outInd = 0;
 
-	//РёР·Р±СЂРѕСЏРІР°РјРµ РµР»РµРјРµРЅС‚РёС‚Рµ Р·Р°РїРёСЃР°РЅРё РІ РјР°СЃРёРІР° СЃ РґР°РЅРЅРё РѕС‚ С„Р°Р№Р»Р°
+	//изброяваме елементите записани в масива с данни от файла
 	int elem = 0;
 
 	int command;
@@ -1405,14 +1409,12 @@ int main()
 	return 0;
 }
 
-void printGreetings()
-{
+void printGreetings() {
 	cout << R"(
  ____   _____   ___   _______  _   _  ___      _______ 
 | ___ \/ _ \ \ / / | / /  _  || | | |/ _ \    / /____ |
 | |_/ / /_\ \ V /| |/ /| | | || | | / /_\ \  / /    / /
 |    /|  _  |\ / |    \| | | || | | |  _  | < <     \ \
 | |\ \| | | || | | |\  \ \_/ /\ \_/ / | | |  \ \.___/ /
-\_| \_\_| |_/\_/ \_| \_/\___/  \___/\_| |_/   \_\____/)"
-		 << '\n';
+\_| \_\_| |_/\_/ \_| \_/\___/  \___/\_| |_/   \_\____/)" << '\n';
 }
