@@ -1,0 +1,21 @@
+﻿  Line.cpp
+  main.cpp
+c:\users\calab\desktop\oop-project\oop-project\main.cpp(58): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\calab\desktop\oop-project\oop-project\main.cpp(95): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\calab\desktop\oop-project\oop-project\main.cpp(180): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\calab\desktop\oop-project\oop-project\main.cpp(262): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\calab\desktop\oop-project\oop-project\main.cpp(556): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\calab\desktop\oop-project\oop-project\main.cpp(655): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\calab\desktop\oop-project\oop-project\main.cpp(1061): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\calab\desktop\oop-project\oop-project\main.cpp(1206): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\calab\desktop\oop-project\oop-project\main.cpp(1340): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  Point.cpp
+  Segment.cpp
+  Tetrahedron.cpp
+c:\users\calab\desktop\oop-project\oop-project\tetrahedron.cpp(69): warning C4805: '==': unsafe mix of type 'bool' and type 'double' in operation
+c:\users\calab\desktop\oop-project\oop-project\tetrahedron.cpp(78): warning C4805: '==': unsafe mix of type 'bool' and type 'double' in operation
+  Triangle.cpp
+c:\users\calab\desktop\oop-project\oop-project\triangle.cpp(77): warning C4805: '==': unsafe mix of type 'bool' and type 'double' in operation
+  Vector.cpp
+  Generating Code...
+  OOP-Project.vcxproj -> C:\Users\calab\Desktop\OOP-Project\Debug\OOP-Project.exe
