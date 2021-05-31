@@ -92,47 +92,45 @@ bool Line::operator+(const Point& rhs) const{
 }
 
 //|| operator проверка дали две прави са успоредни
-bool operator||(const Line& lhs,const Line& rhs){ 
-    Vector crossProd(lhs.getVector()^rhs.getVector());
-    
-    //ako e nulev vektor znachi 2ta vektora sa usporedni i ot tam i pravite
-    return crossProd.isNullVector();
-}
-//operator== дали две прави съвпадат
-bool operator==(const Line& lhs,const Line& rhs){
-    
-    Vector v1(lhs.getPoint(),rhs.getPoint());
+bool Line::operator||(const Line& rhs)const {
+	Vector crossProd(this->getVector() ^ rhs.getVector());
 
-    if( (lhs.getVector().arePararell(rhs.getVector())) && (v1.arePararell(lhs.getVector()))  && (v1.arePararell(rhs.getVector())) ){
-        return true;
-    }
-    return false;
-    
-
+	//ako e nulev vektor znachi 2ta vektora sa usporedni i ot tam i pravite
+	return crossProd.isNullVector();
 }
-//operator&& дали се пресичат
-bool operator&&(const Line&lhs, const Line& rhs){
-    if(lhs.getPoint()==rhs.getPoint()){
-        return true;
-    }
-    return false;
+//operator==
+bool Line::operator==(const Line& rhs)const{
+	Vector v1(this->getPoint(), rhs.getPoint());
+
+	if ((this->getVector().arePararell(rhs.getVector())) && (v1.arePararell(this->getVector())) && (v1.arePararell(rhs.getVector()))) {
+		return true;
+	}
+	return false;
 
 }
 
-//operator!= дали са кръстосани
-bool operator!=(const Line& lhs,const Line& rhs){
-    if(!(lhs==rhs) && !(lhs||rhs) && !(lhs&&rhs) ){
-        return true;
-    }
-    return false;
+bool Line::operator!=(const Line & rhs)const
+{
+	if (!(*this == rhs) && !(*this || rhs) && !(*this&&rhs)) {
+		return true;
+	}
+	return false;
 }
 
-//operator | дали са перпендикулярни
-bool operator|(const Line& lhs,const Line& rhs){
-    if((lhs.getVector()).arePerpendicular(rhs.getVector())){
-        return true;
-    }
-    return false;
+//operator |
+bool Line::operator|(const Line& rhs)const {
+	if ((this->getVector()).arePerpendicular(rhs)) {
+		return true;
+	}
+	return false;
+}
+
+bool Line::operator&&(const Line & rhs)const
+{
+	if (this->getPoint() == rhs.getPoint()) {
+		return true;
+	}
+	return false;
 }
 
 std::ostream& operator<<(std::ostream& lhs,const Line& rhs){

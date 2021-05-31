@@ -28,18 +28,15 @@ double findAngleBetweenTwoLines(const Line&) const;
 bool operator+(const Point&) const;
 
 //|| operator проверка дали две прави са успоредни
-friend bool operator||(const Line&, const Line&);
-//== operator проверка дали две прави съвпадат
-friend bool operator==(const Line&, const Line&);
+	bool operator||(const Line&)const;
+	//== operator проверка дали две прави съвпадат
+	bool operator==(const Line&)const;
+	//operator !=
+	bool operator!=(const Line &)const;
+	//operator| перпендикулярност на прави
+	bool operator|(const Line&)const;
 
-//operator&& дали се пресичат
-friend bool operator&&(const Line&, const Line&);
-
-//operator!= дали са кръстосани
-friend bool operator!=(const Line&, const Line&);
-
-//operator| перпендикулярност на прави
-friend bool operator|(const Line&,const Line&);
+	bool operator&&(const Line&)const;
 
 //getters
 Vector getVector() const{ return vc;}

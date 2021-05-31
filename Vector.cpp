@@ -148,7 +148,7 @@ Vector operator*(double r, const Vector& rhs) {
 	return Vector(r * rhs.getVectorX(), r * rhs.getVectorY(), r * rhs.getVectorZ());
 }
 //overloading operator() mixed product
-double Vector::operator()(const Vector& v, const Vector& w) {
+double Vector::operator()(const Vector& v, const Vector& w)const {
 	return ((*this ^ v) * w);
 
 }

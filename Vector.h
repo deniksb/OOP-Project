@@ -48,7 +48,7 @@ public:
 	//overloading operator^ векторно произведение
 	Vector operator^(const Vector&)const;
 	//overloading operator() triple scalar product
-	double operator()(const Vector&,const Vector&);
+	double operator()(const Vector&,const Vector&)const;
 	//projection of a vector a on b
 	Vector Projection(const Vector &, const Vector &) const;
 	
